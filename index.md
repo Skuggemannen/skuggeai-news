@@ -45,7 +45,7 @@ X (tidligere Twitter) har lansert en hostet MCP-server som skal forenkle integra
 🚨 **Kritiske sårbarheter**
 - **Oracle E-Business Suite (CVE-2026-46817):** En kritisk sårbarhet med en CVSS-score på 9.8 i Oracle Payments er aktivt utnyttet i den virkelige verden. Sårbarheten i File Transmissions-komponenten tillater ikke-autentiserte angripere å lese filer og potensielt ta full kontroll over instanser. Berørte versjoner inkluderer 12.2.3 til 12.2.15.
 - **SimpleHelp RMM (CVE-2026-48558):** En ekstremt kritisk autentiseringssvikt (CVSS 10.0) i SimpleHelp-programvare blir brukt til å distribuere malwarefamiliene TaskWeaver og Djinn Stealer. Ved å sende falske OpenID Connect-tokens kan angripere opprette privilegerte tekniker-kontoer.
-- **Progress Kemp LoadMaster (CVE-202CO-8037):** En sårbarhet med CVSS 9.8 i LoadMaster-enheter kan tillate ikke-autentiserte angripere å kjøre vilkårlige kommandoer med root-rettigheter.
+- **Progress Kemp LoadMaster (CVE-2026-8037):** En sårbarhet med CVSS 9.8 i LoadMaster-enheter kan tillate ikke-autentiserte angripere å kjøre vilkårlige kommandoer med root-rettigheter.
 - **libssh2 (CVE-2026-55200):** En kritisk sårbarhet (CVSS 9.2) i libssh2 kan utløse minnekorrosjon på klienter via en skadelig SSH-server. Siden biblioteket er integrert i verktøy som curl, Git og PHP, er eksponeringsflaten enorm.
 
 💀 **Aktive angrep og brudd**
