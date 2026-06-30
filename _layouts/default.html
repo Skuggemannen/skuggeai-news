@@ -33,8 +33,7 @@
     }
     .pulse {
       width: 7px; height: 7px; border-radius: 50%;
-      background: var(--green);
-      flex-shrink: 0;
+      background: var(--green); flex-shrink: 0;
       animation: pulse 2.5s ease-in-out infinite;
     }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
@@ -55,6 +54,28 @@
     strong { color: #e6edf3; }
     ul, ol { padding-left: 1.4rem; margin: 0.35rem 0 0.75rem; }
     li { margin: 0.2rem 0; padding-left: 0.15rem; }
+
+    /* Rapport-titler: 🤖 AI-NYHETER / 🔐 CYBERSIKKERHET */
+    p.report-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #e6edf3;
+      margin-top: 2rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* Subseksjon-overskrifter: 🧠 Nye modeller / 🚨 Kritiske sårbarheter */
+    p.section-header {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #e6edf3;
+      margin-top: 1.25rem;
+      margin-bottom: 0.15rem;
+    }
+
     footer {
       text-align: center; padding: 2rem;
       color: var(--text-dim); font-size: 0.78rem;
@@ -74,5 +95,15 @@
   </header>
   <main>{{ content }}</main>
   <footer>SkuggeAI Research Pipeline &middot; Qwen3 + Gemma 4 + LDR</footer>
+  <script>
+    document.querySelectorAll('main p').forEach(p => {
+      const t = p.textContent;
+      if (t.includes('AI-NYHETER') || t.includes('CYBERSIKKERHET')) {
+        p.classList.add('report-title');
+      } else if (p.querySelector('strong') && /^[\p{Emoji}]/u.test(t.trim())) {
+        p.classList.add('section-header');
+      }
+    });
+  </script>
 </body>
 </html>
