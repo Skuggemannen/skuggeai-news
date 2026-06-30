@@ -1,6 +1,8 @@
-Automatisk genererte nyhetsrapporter.
-
 ---
+layout: default
+---
+
+<!-- INSERT_ABOVE -->
 
 
 ## 30. juni 2026
