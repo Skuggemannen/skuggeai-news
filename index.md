@@ -1,4 +1,8 @@
 ---
+layout: default
+---
+
+<!-- INSERT_ABOVE -->
 
 
 ## 1. juli 2026
@@ -56,11 +60,6 @@ Microsoft vurderer å akselerere sin overgang til post-quantum kryptografi (PQC)
 
 📊 Kvalitet: 2/10 (fakta 1/10 · skriving 2/10)
 
-layout: default
----
-
-<!-- INSERT_ABOVE -->
-
 
 ## 30. juni 2026
 
@@ -117,4 +116,3 @@ X (tidligere Twitter) har lansert en hostet MCP-server som skal forenkle integra
 
 **🔵 Ubekreftet (kun én kilde)**
 - **Microsoft Defender BlueHammer:** CISA bekrefter at ransomware-grupper utnytter BlueHammer (CVE-2026-33825) for lokal privilegieeskalering. (Kilde: bleepingcomputer.com)
-
