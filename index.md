@@ -67,62 +67,6 @@ layout: default
 <!-- INSERT_ABOVE -->
 
 
-## 1. juli 2026
-
-🤖 **AI-NYHETER** — 1. juli 2026
-
-**Sammendrag:** Dagens teknologibilde preges av en massiv bølge av nye, kostnadseffektive modeller som er spesialisert for agent-basert arbeid. Samtidig ser vi en tydelig trend der AI-kapasitet flyttes fra generelle chat-grensesnitt til spesialiserte verktøykasser for vitenskap og industriell automatisering.
-
-🧠 **Nye modeller og kapabiliteter**
-Anthropic har lansert Claude Sonnet 5, en ny midt-område-modell som er optimalisert for agent-oppgaver. Modellen overgår sin forgjenger, Sonnet 4.6, på kritiske benchmarks som SWE-bench Pro (63,2 %) og OSWorld-Verified (81,2 %). Lanseringen markerer et skifte mot mer effektive og rimeligere agenter, med en introduksjonspris på $2/$10 per MTok frem til 31. august.
-
-**💼 Industri og marked**
-Det pågår en intensivert konkurranse om AI-infrastruktur og maskinvare. Etched har sikret kontrakter verdt 1 milliard dollar for sine nye AI-chiper, utviklet i samarbeid med TSMC, for å skape mer energieffektive "frontier inference clusters". Samtidig ser vi store bevegelser i det finansielle landskapet, der SpaceX har inngått en bindende avtale om å kjøpe kodedesign-verktøyet Cursor for 60 milliarder dollar i en transaksjon basert på aksjer.
-
-**📜 Policy og regulering**
-Regulering av kunstig intelligens nærmer seg kritiske milepæler. EU AI Act er satt til å tre i kraft 2. august 2026, noe som krever at alle medlemsstater etablerer nasjonale regulatoriske sandkasser innen samme dato. I Norge er det også fokus på teknologiske selskapers bidrag til fellesskapet, der Skattekommisjonen nå foreslår en ny skatteordning for å sikre at globale teknologigiganter betaler en rettferdig andel av verdiene de henter ut fra det norske markedet.
-
-**⚡ Viktigst i dag:** Anthropics lansering av Claude Sonnet 5 setter en ny standard for hvor kraftige og kostnadseffektive autonome agenter kan være.
-
-**🔵 Ubekreftet (kun én kilde)**
-*   **Trump-administrasjonen løser eksportkontroller på Anthropic-modeller:** Det rapporteres at handelsminister Howard Lutnick har fjernet behovet for spesiallisens for eksport av Anthropics Mythos 5 og Fable 5-modeller.
-
-📊 Kvalitet: 5/10 (fakta 1/10 · skriving 8/10)
-
-🔐 **CYBERSIKKERHET** — 1. juli 2026
-
-**Sammendrag:** Dagens trusselbilde preges av en massiv bølge av utnyttelse av kritiske sårbarheter i bedriftskritisk programvare som Oracle og Microsoft Defender. Samtidig ser vi en økende trend der statlige aktører og organiserte kriminelle grupper målretter seg mot sårbar infrastruktur og AI-baserte utviklingsverktøy.
-
-🚨 **Kritiske sårbarheter**
-- **Microsoft Defender Zero-Days:** Tre kritiske sårbarheter (BlueHammer CVE-2026-33825, RedSun CVE-20_6-41091, og UnDefend CVE-2026-45498) er identifisert i Microsoft Defender. CISA bekrefter at ransomware-grupper allerede utnytter BlueHammer-svakheten for lokal privilegieeskalering.
-- **Oracle E-Business Suite:** En kritisk sårbarhet (CVE-2026-46817) i Oracle Payments blir aktivt utnyttet i målrettede angrep. Svakheten kan gi full kontroll over systemer uten autentisering.
-- **libssh2-risiko:** En offentlig Proof-of-Concept er nå tilgjengelig for CVE-2026-55200, en sårbarhet med CVSS 9.2 som kan føre til kodekjøring i biblioteker brukt av blant annet curl og PHP.
-- **Progress Kemp LoadMaster:** Den kritiske sårbarheten CVE-2026-8037 (CVSS 9.8) er under aktiv utnyttelse og tillater uautentisert kjøring av root-kommandoer.
-- **SimpleHelp RMM:** En autentiseringssvikt (CVE-2026-48558) blir brukt til å distribuere Djinn Stealer-malware, som målretter seg mot sensitive koder og kryptovaluta-lommebøker.
-
-💀 **Aktive angrep og brudd**
-- **Oracle PeopleSoft-kampanje:** En omfattende kampanje fra ShinyHunters-gruppen har rammet flere store organisasjoner, inkludert Nissan Americas og det amerikanske reguleringsorganet NAIC. Angrepet utnytter en null-dag-svakhet og har ført til tyveri av sensitive personopplysninger, inkludert bankdetaljer og skattedokumenter.
-- **Sektor-angrep i Storbritannia:** Den britiske helsesektoren har opplevd en ti ganger økning i antall angrep i første halvår 2026, der 41 % av hendelsene var forsøk på å utnytte Log4Shell.
-- **Ransomware mot industrien:** Blackfield-gruppen krever nå 2 millioner dollar i løsepenger fra den japanske elektronikkgiganten Nidec Corporation.
-- **Dataeksponering i Sør-Korea:** Det sørkoreanske selskapet Coupang har mottatt en rekordhøy bot på ca. 409 millioner dollar etter et databrudd som berørte 3lag 37 millioner kunder.
-- **Malware i utviklingsverktøy:** Det er oppdaget infostealer-malware i hijacked npm- og Go-pakker som aktiveres via VS Code, samt en sårbarhet i Amazon Q VS-utvidelsen som kan eksponere skykoder.
-
-🌍 **Statlige aktører**
-- **Russisk aktivitet mot NATO:** Etterretning viser at den russiske APT28-gruppen (Fancy Bear) har økt sine angrep mot tysk luftfartssikkerhet, som en del av en 25 % økning i russiske angrep mot NATO-land det siste året.
-- **Sabotasje mot vannsystemer:** Det er rapportert om pågående forsøk fra statlige aktører i Iran, Russland og Kina på å sabotere vannforsyningssystemer ved å utnytte svake passord og manglende nettverkssegmentering.
-
-🛡️ **Viktige patches**
-- **Oracle Critical Security Patch Update:** Utgitt for å tette CVE-2026-46817 i Oracle E-Business Suite (versjonene 12.2.3 til 12.2.15).
-- **Progress Kemp:** Patch er tilgjengelig for å adressere den kritiske sårbarheten i LoadMaster.
-
-**⚡ Viktigst i dag:** En bølge av aktive utnyttelser av kritiske sårbarheter i Oracle- og Microsoft-økosystemene utgjør en akutt trussel mot global bedriftsinfrastruktur.
-
-**🔵 Ubekreftet (kun én kilde)**
-Microsoft vurderer å akselerere sin overgang til post-quantum kryptografi (PQC) for å beskytte mot "harvest now, decrypt later"-angrep, ifølge bleepingcomputer.com.
-
-📊 Kvalitet: 2/10 (fakta 1/10 · skriving 2/10)
-
-
 ## 30. juni 2026
 
 🤖 **AI-NYHETER** — 30. juni 2026
