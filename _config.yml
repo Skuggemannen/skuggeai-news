@@ -1,1 +1,5 @@
 title: SkuggeAI Nyheter
+paginate: 8
+paginate_path: "/side:num/"
+plugins:
+  - jekyll-paginate
