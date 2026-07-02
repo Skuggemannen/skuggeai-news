@@ -76,11 +76,28 @@
       margin-bottom: 0.15rem;
     }
 
+    /* Paginering (forside) */
+    nav.pager {
+      display: flex; justify-content: space-between;
+      margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    nav.pager a { color: var(--accent); text-decoration: none; }
+    nav.pager a:hover { text-decoration: underline; }
+
+    /* Arkiv-liste */
+    ul.arkiv-liste { list-style: none; padding-left: 0; }
+    ul.arkiv-liste li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    ul.arkiv-liste a { color: var(--accent); text-decoration: none; }
+    ul.arkiv-liste a:hover { text-decoration: underline; }
+
     footer {
       text-align: center; padding: 2rem;
       color: var(--text-dim); font-size: 0.78rem;
       border-top: 1px solid var(--border);
     }
+    footer a { color: var(--text-dim); }
     @media(max-width:600px) {
       header { padding: 0.8rem 1rem; }
       main { padding: 1.5rem 1rem 4rem; }
@@ -94,7 +111,7 @@
     <span class="sub">Automatisk generert</span>
   </header>
   <main>{{ content }}</main>
-  <footer>SkuggeAI Research Pipeline &middot; Qwen3 30B + Gemma 4 26B + LDR (Qwen3.6 27B)</footer>
+  <footer>SkuggeAI Research Pipeline &middot; Qwen3 30B + Gemma 4 26B + LDR (Qwen3.6 27B) &middot; <a href="{{ '/arkiv/' | relative_url }}">📁 Arkiv</a></footer>
   <script>
     document.querySelectorAll('main p').forEach(p => {
       const t = p.textContent;
