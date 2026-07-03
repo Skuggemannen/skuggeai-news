@@ -78,7 +78,7 @@
 
   .masthead{
     border-bottom:1px solid var(--line);
-    padding:1.1rem 1.75rem;
+    padding:1.1rem 2.5rem;
     display:flex;
     align-items:baseline;
     justify-content:space-between;
@@ -108,7 +108,17 @@
   }
   .masthead .stamp b{ color:var(--muted); font-weight:500; }
 
-  main{ max-width:700px; margin:0 auto; padding:0 1.75rem; }
+  /* ---------- Avis-oppsett: hovedspalte + sidefelt ---------- */
+  .avis{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 2.5rem;
+    display:grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap:3.5rem;
+    align-items:start;
+  }
+  main.hoved{ min-width:0; padding-bottom:2rem; }
 
   /* Dagens dato — hver .dispatch sin egen store overskrift */
   .dispatch{ margin-bottom:1rem; }
@@ -116,7 +126,7 @@
   .dispatch h2{
     font-family:'Big Shoulders', sans-serif;
     font-weight:900;
-    font-size:clamp(2.6rem, 9vw, 4.6rem);
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
     line-height:.92;
     letter-spacing:.005em;
     text-transform:uppercase;
@@ -151,13 +161,13 @@
   p.channel-tag.tag-sec{ color:var(--alert); }
 
   p.lede{
-    font-size:1.16rem;
+    font-size:1.14rem;
     font-weight:500;
     line-height:1.55;
     color:var(--text);
     text-wrap:pretty;
     margin:0 0 2rem;
-    max-width:38em;
+    max-width:42em;
   }
   p.lede strong{ font-weight:700; color:#f2f5f8; }
 
@@ -173,11 +183,11 @@
     border-bottom:1px solid var(--line-dim);
   }
 
-  main p, main li{ max-width:40em; }
-  main ul{ margin:0 0 1.4rem; padding-left:1.2rem; }
-  main li{ margin:0 0 .55rem; padding-left:.1rem; }
-  main li::marker{ color:var(--faint); }
-  main p{ margin:0 0 1rem; }
+  main.hoved p, main.hoved li{ max-width:42em; }
+  main.hoved ul{ margin:0 0 1.4rem; padding-left:1.2rem; }
+  main.hoved li{ margin:0 0 .55rem; padding-left:.1rem; }
+  main.hoved li::marker{ color:var(--faint); }
+  main.hoved p{ margin:0 0 1rem; }
   strong{ color:#f2f5f8; font-weight:600; }
 
   p.verdict{
@@ -236,21 +246,58 @@
   ul.arkiv-liste a{ color:var(--text); text-decoration:none; }
   ul.arkiv-liste a:hover{ color:var(--signal); }
 
+  /* ---------- Sidefelt: tidligere utgaver ---------- */
+  aside.sidefelt{
+    position:sticky; top:2.5rem;
+    padding-top:2.4rem;
+    border-left:1px solid var(--line);
+    padding-left:2rem;
+  }
+  aside.sidefelt .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:.68rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--faint); margin-bottom:1.4rem;
+  }
+  .utgave{ display:block; text-decoration:none; padding:1.1rem 0; border-bottom:1px solid var(--line-dim); }
+  .utgave:first-child{ padding-top:0; }
+  .utgave .dato{
+    font-family:'Big Shoulders', sans-serif; font-weight:700; font-size:1.2rem;
+    text-transform:uppercase; color:var(--text); letter-spacing:.01em;
+  }
+  .utgave .teaser{
+    font-style:italic; font-size:.85rem; color:var(--muted); line-height:1.5;
+    margin-top:.4rem;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .utgave:hover .dato{ color:var(--signal); }
+  .se-arkiv{
+    display:block; margin-top:1.6rem; font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted);
+    text-decoration:none;
+  }
+  .se-arkiv:hover{ color:var(--text); }
+
   footer.credit{
     text-align:center;
-    padding:1.6rem 1.75rem 3rem;
+    padding:1.6rem 2.5rem 3rem;
     font-family:'IBM Plex Mono', monospace;
     font-size:.68rem;
     letter-spacing:.04em;
     color:var(--faint);
+    border-top:1px solid var(--line);
+    margin-top:1rem;
   }
   footer.credit a{ color:var(--faint); text-decoration:none; }
   footer.credit a:hover{ color:var(--muted); }
   footer.credit .rig{ color:var(--muted); }
 
-  @media (max-width:640px){
-    .masthead{ padding:1rem 1.15rem; }
-    main{ padding:0 1.15rem; }
+  @media (max-width:920px){
+    .avis{ grid-template-columns: 1fr; gap:0; padding:0 1.25rem; }
+    aside.sidefelt{
+      position:static; border-left:none; border-top:1px solid var(--line);
+      padding:2rem 0 0; margin-top:1rem;
+    }
+    .masthead{ padding:1rem 1.25rem; }
+    footer.credit{ padding:1.6rem 1.25rem 3rem; }
   }
 </style>
 </head>
@@ -266,7 +313,30 @@
     </div>
   </div>
 
-  <main>{{ content }}</main>
+  <div class="avis">
+    <main class="hoved">{{ content }}</main>
+
+    {% unless page.hide_sidebar %}
+    <aside class="sidefelt">
+      <div class="eyebrow">Tidligere utgaver</div>
+      {% assign tidligere = site.posts | offset: 1 | limit: 5 %}
+      {% for post in tidligere %}
+        {% assign plain = post.content | strip_html | strip_newlines %}
+        {% assign deler = plain | split: "Sammendrag:" %}
+        {% if deler.size > 1 %}
+          {% assign teaser = deler[1] | strip | truncatewords: 22 %}
+        {% else %}
+          {% assign teaser = plain | truncatewords: 22 %}
+        {% endif %}
+        <a class="utgave" href="{{ post.url | relative_url }}">
+          <div class="dato">{{ post.title }}</div>
+          <div class="teaser">{{ teaser }}</div>
+        </a>
+      {% endfor %}
+      <a class="se-arkiv" href="{{ '/arkiv/' | relative_url }}">Se hele arkivet &rarr;</a>
+    </aside>
+    {% endunless %}
+  </div>
 
   <footer class="credit">
     <span class="rig">Qwen3 30B &middot; Gemma 4 26B &middot; LDR (Qwen3.6 27B)</span><br>
