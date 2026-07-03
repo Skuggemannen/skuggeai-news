@@ -319,7 +319,7 @@
     {% unless page.hide_sidebar %}
     <aside class="sidefelt">
       <div class="eyebrow">Tidligere utgaver</div>
-      {% assign tidligere = site.posts | offset: 1 | limit: 5 %}
+      {% assign tidligere = site.posts | slice: 1, 5 %}
       {% for post in tidligere %}
         {% assign plain = post.content | strip_html | strip_newlines %}
         {% assign deler = plain | split: "Sammendrag:" %}
