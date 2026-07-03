@@ -293,6 +293,17 @@
   footer.credit a:hover{ color:var(--muted); }
   footer.credit .rig{ color:var(--muted); }
 
+  .ai-varsel{
+    max-width:1180px;
+    margin:0 auto;
+    padding:1rem 2.5rem;
+    border-bottom:1px solid var(--line);
+    font-size:.82rem;
+    line-height:1.55;
+    color:var(--muted);
+  }
+  .ai-varsel strong{ color:var(--signal); font-weight:600; }
+
   @media (max-width:920px){
     .avis{ grid-template-columns: 1fr; gap:0; padding:0 1.25rem; }
     aside.sidefelt{
@@ -301,6 +312,7 @@
     }
     .masthead{ padding:1rem 1.25rem; }
     footer.credit{ padding:1.6rem 1.25rem 3rem; }
+    .ai-varsel{ padding:1rem 1.25rem; }
   }
 </style>
 </head>
@@ -314,6 +326,10 @@
       Rapport {{ site.posts.size }} &middot; sist bygget<br>
       <b>{{ site.time | date: "%d.%m.%Y &middot; %H:%M" }}</b>
     </div>
+  </div>
+
+  <div class="ai-varsel">
+    <strong>Om denne siden:</strong> Innholdet skrives automatisk av en kjede lokale AI-modeller (research, ekstraksjon, skriving, faktasjekk) — ingen menneskelig redaktør leser gjennom før publisering. Fakta kryssjekkes mot levende søk og offisielle kilder (NVD for CVE-er) der det er mulig, men kan IKKE garanteres 100&nbsp;% korrekt. Bruk siden som en peker til interessante saker, ikke som eneste kilde &mdash; sjekk opp det som er viktig for deg selv.
   </div>
 
   <div class="avis">
