@@ -1,0 +1,73 @@
+---
+layout: default
+title: Metoden
+permalink: /metoden/
+hide_sidebar: true
+---
+<p class="breadcrumb mono"><a href="{{ '/' | relative_url }}">&larr; Forsiden</a></p>
+
+<div class="dispatch"><h2>Metoden</h2></div>
+
+<p class="lede">Hver natt klokken 02:00 kjører en fullautomatisk redaksjon på lokal maskinvare — <strong>ingen skytjenester, ingen menneskelig redaktør før publisering</strong>. Slik henger stegene sammen, fra rå RSS-tekst til publisert rapport.</p>
+
+<div class="stat-strip">
+  <div class="stat"><div class="num mono">62</div><div class="label">RSS-kilder</div></div>
+  <div class="stat"><div class="num mono">~100</div><div class="label">Betrodde domener</div></div>
+  <div class="stat"><div class="num mono">3</div><div class="label">Lokale KI-modeller</div></div>
+  <div class="stat"><div class="num mono">13</div><div class="label">Kontrollpunkter</div></div>
+  <div class="stat"><div class="num mono">~90</div><div class="label">Minutter/natt</div></div>
+  <div class="stat"><div class="num mono">0</div><div class="label">Skytjenester</div></div>
+</div>
+
+<p class="sub">Prosessen — i rekkefølge</p>
+
+<div class="pipeline">
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">01</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Innhenting</h3>
+      <p class="stage-desc">Artikler hentes og skrapes fra 62 håndplukkede kilder — 30 innen KI, 32 innen cybersikkerhet. Rent mekanisk steg, ingen KI involvert.</p>
+      <p class="stage-meta mono"><b>Ingen modell</b> &middot; RSS + skraping &middot; 2 temaspor</p>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">02</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Dypdykk</h3>
+      <p class="stage-desc">GPU-serveren vekkes, og en egen modell gjør sitt eget iterative søk — leser, følger opp tråder, søker videre — utover det RSS-feedene fanger opp.</p>
+      <p class="stage-meta mono"><b>Qwen3.6 27B</b> &middot; LDR &middot; ~30&ndash;45 min/tema</p>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">03</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Bearbeiding &amp; kontroll</h3>
+      <p class="stage-desc">Fire selvstendige runder etter hverandre: sakene struktureres, opplagte duplikater fjernes, off-tema-innhold luker bort, og saker med kun én kilde sjekkes mot en liste på rundt 100 betrodde kilder før de kan regnes som bekreftet.</p>
+      <p class="stage-meta mono"><b>Qwen3 30B</b> &middot; ekstraher &rarr; dedup &rarr; verifiser &rarr; korroborer</p>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">04</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Skriving</h3>
+      <p class="stage-desc">De kontrollerte sakene settes sammen til én sammenhengende rapport, med tydelig skille mellom det som er bekreftet og det som fortsatt står som ubekreftet.</p>
+      <p class="stage-meta mono"><b>Gemma 4 26B</b> &middot; strukturert utkast</p>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">05</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Faktasjekk &amp; publisering</h3>
+      <p class="stage-desc">Konkrete påstander i utkastet dobbeltsjekkes mot nye søk før publisering — klare feil rettes automatisk, aldri på gjetning. Sikkerhetssaker med CVE-nummer verifiseres mot en offisiell sårbarhetsdatabase. Til slutt legges rapporten ut, og alle måltall lagres for sporing over tid.</p>
+      <p class="stage-meta mono"><b>Qwen3 30B</b> + NVD &middot; faktasjekk &rarr; CVE-sjekk &rarr; GitHub Pages &rarr; kvalitetslogg</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="verdict">Hele poenget med prosjektet er å teste hvor langt <strong>kun lokale modeller</strong> kan bringe en nyhetsredaksjon — uten en eneste avhengighet til Claude, GPT eller andre skytjenester i selve driften. <a href="{{ '/' | relative_url }}">Se dagens rapport &rarr;</a></p>
