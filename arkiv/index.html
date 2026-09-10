@@ -4,9 +4,34 @@ title: Arkiv
 permalink: /arkiv/
 hide_sidebar: true
 ---
+{% assign mnd_kort = "JAN,FEB,MAR,APR,MAI,JUN,JUL,AUG,SEP,OKT,NOV,DES" | split: "," %}
+{% assign mnd_lang = "januar,februar,mars,april,mai,juni,juli,august,september,oktober,november,desember" | split: "," %}
 <h1 class="page-title">Arkiv</h1>
-<ul class="arkiv-liste">
-{% for post in site.posts %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+{% if site.posts.size > 0 %}
+  {% assign eldste = site.posts | last %}
+  {% assign eldste_mi = eldste.date | date: "%-m" | plus: 0 | minus: 1 %}
+  <p class="arkiv-meta">{{ site.posts | size }} utgaver &middot; siden {{ eldste.date | date: "%-d." }} {{ mnd_lang[eldste_mi] }} {{ eldste.date | date: "%Y" }}</p>
+
+  {% assign per_ar = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for ar in per_ar %}
+  <section class="arkiv-ar">
+    <h2 class="ar-tall">{{ ar.name }}</h2>
+    {% assign per_mnd = ar.items | group_by_exp: "p", "p.date | date: '%m'" %}
+    {% for m in per_mnd %}
+      {% assign mi = m.name | plus: 0 | minus: 1 %}
+      <div class="arkiv-rad">
+        <span class="maned">{{ mnd_kort[mi] }}</span>
+        <div class="dager">
+          {% assign dager = m.items | sort: "date" %}
+          {% for post in dager %}
+          <a class="dag" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.date | date: "%-d" }}</a>
+          {% endfor %}
+        </div>
+        <span class="antall">{{ m.items | size }}</span>
+      </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+{% else %}
+  <p class="arkiv-meta">Ingen utgaver ennå.</p>
+{% endif %}
