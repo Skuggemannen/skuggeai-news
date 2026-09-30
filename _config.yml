@@ -1,5 +1,11 @@
 title: SkuggeAI Nyheter
+# Eksplisitt (ellers fylt inn av github-metadata på Pages) — RSS-feeden trenger absolutte URL-er
+url: "https://skuggemannen.github.io"
+baseurl: "/skuggeai-news"
 paginate: 8
 paginate_path: "/side:num/"
+collections:
+  galleri:
+    output: false
 plugins:
   - jekyll-paginate

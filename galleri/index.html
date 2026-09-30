@@ -1,0 +1,42 @@
+---
+layout: default
+title: Galleri
+permalink: /galleri/
+hide_sidebar: true
+---
+{% assign mnd_lang = "januar,februar,mars,april,mai,juni,juli,august,september,oktober,november,desember" | split: "," %}
+<h1 class="page-title">Galleri</h1>
+<p class="arkiv-meta">Nattens nyheter tolket av Gemma 4 26B &middot; malt av Qwen Image 2.1 &middot; lokalt på RTX 3090 &middot; <a href="{{ '/galleri/feed.xml' | relative_url }}">RSS</a></p>
+{% assign bilder = site.galleri | sort: "date" | reverse %}
+{% if bilder.size == 0 %}
+  <p>Ingen bilder ennå — første kommer etter neste nattkjøring.</p>
+{% endif %}
+{% assign dager = bilder | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
+{% for dag in dager %}
+  {% assign d0 = dag.items | first %}
+  {% assign mi = d0.date | date: "%-m" | minus: 1 %}
+  {% assign post_url = nil %}
+  {% for p in site.posts %}
+    {% assign pd = p.date | date: "%Y-%m-%d" %}
+    {% if pd == dag.name %}{% assign post_url = p.url %}{% break %}{% endif %}
+  {% endfor %}
+  <section class="galleri-dag">
+    <h2 class="ar-tall">{{ d0.date | date: "%-d" }}. {{ mnd_lang[mi] }} {{ d0.date | date: "%Y" }}
+      {% if post_url %}<a class="til-nyheter mono" href="{{ post_url | relative_url }}">Les dagens nyheter &rarr;</a>{% endif %}
+    </h2>
+    <div class="galleri-grid">
+    {% assign items = dag.items | sort: "tema" %}
+    {% for b in items %}
+      <figure class="galleri-kort" id="{{ b.date | date: '%Y-%m-%d' }}-{{ b.tema }}">
+        <a href="{{ b.bilde | relative_url }}"><img src="{{ b.bilde | relative_url }}" alt="{{ b.title | escape }}" loading="lazy" width="1600" height="1600"></a>
+        <figcaption>
+          <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}</span>
+          <span class="overskrift">{{ b.title }}</span>
+          <span class="stil">{{ b.stil }}</span>
+          <details><summary class="mono">Prompt</summary><p class="mono">{{ b.prompt | escape | newline_to_br }}</p><p class="mono seed">seed {{ b.seed }}</p></details>
+        </figcaption>
+      </figure>
+    {% endfor %}
+    </div>
+  </section>
+{% endfor %}

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ site.title }}</title>
+<link rel="alternate" type="application/rss+xml" title="SkuggeAI Galleri" href="{{ '/galleri/feed.xml' | relative_url }}">
 <style>
   @font-face {
     font-family: 'Big Shoulders';
@@ -122,7 +123,7 @@
 
   /* Dagens dato — hver .dispatch sin egen store overskrift */
   .dispatch{ margin-bottom:1rem; }
-  .dispatch + .dispatch{ padding-top:1rem; }
+  .dispatch ~ .dispatch{ padding-top:1rem; }
   .dispatch h2{
     font-family:'Big Shoulders', sans-serif;
     font-weight:900;
@@ -438,6 +439,38 @@
   @media (max-width:600px){
     .stage{ gap:1rem; }
   }
+  /* ---------- Galleri / nyhetsbilder (lagt til 30/09) ---------- */
+  .tema{ font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; }
+  .tema-ai{ color:var(--signal); }
+  .tema-sec{ color:var(--alert); }
+  .galleri-dag{ margin-bottom:3.2rem; }
+  .galleri-dag h2.ar-tall{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
+  a.til-nyheter{ font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-decoration:none; font-weight:500; }
+  a.til-nyheter:hover{ color:var(--signal); }
+  .galleri-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.6rem; margin-top:1.2rem; }
+  figure.galleri-kort{ margin:0; scroll-margin-top:1.5rem; }
+  figure.galleri-kort img{ width:100%; height:auto; display:block; border:1px solid var(--line); }
+  figure.galleri-kort figcaption{ display:flex; flex-direction:column; gap:.3rem; padding-top:.8rem; }
+  .galleri-kort .overskrift, .db-kort .overskrift{
+    font-family:'Big Shoulders', sans-serif; font-weight:800; font-size:1.35rem;
+    text-transform:uppercase; line-height:1.05; color:var(--text);
+  }
+  .galleri-kort .stil{ font-style:italic; font-size:.85rem; color:var(--muted); }
+  .galleri-kort details{ margin-top:.3rem; }
+  .galleri-kort summary{ cursor:pointer; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
+  .galleri-kort summary:hover{ color:var(--muted); }
+  .galleri-kort details p{ font-size:.74rem; line-height:1.6; color:var(--muted); margin:.7rem 0 0; }
+  .galleri-kort details p.seed{ color:var(--faint); }
+  aside.dagens-bilder{ margin:2.2rem 0 1rem; padding-top:1.4rem; border-top:1px solid var(--line); }
+  .db-eyebrow{ font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); margin:0 0 1rem; }
+  .db-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.1rem; max-width:42em; }
+  a.db-kort{ display:flex; flex-direction:column; gap:.3rem; text-decoration:none; }
+  a.db-kort img{ width:100%; height:auto; display:block; border:1px solid var(--line); transition:border-color .12s; }
+  a.db-kort:hover img{ border-color:var(--signal); }
+  a.db-kort .overskrift{ font-size:1.05rem; }
+  @media (max-width:600px){
+    .galleri-grid, .db-grid{ grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
@@ -449,6 +482,7 @@
     <nav class="mast-nav mono">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="on"{% endif %}>Forsiden</a>
       <a href="{{ '/arkiv/' | relative_url }}"{% if page.url == '/arkiv/' %} class="on"{% endif %}>Arkiv</a>
+      <a href="{{ '/galleri/' | relative_url }}"{% if page.url == '/galleri/' %} class="on"{% endif %}>Galleri</a>
       <a href="{{ '/metoden/' | relative_url }}"{% if page.url == '/metoden/' %} class="on"{% endif %}>Metoden</a>
     </nav>
     <div class="stamp mono">
@@ -487,7 +521,7 @@
   </div>
 
   <footer class="credit">
-    <span class="rig">Qwen3 30B &middot; Gemma 4 26B &middot; LDR (Qwen3.8 27B)</span><br>
+    <span class="rig">Qwen3 30B &middot; Gemma 4 26B &middot; LDR (Qwen3.8 27B) &middot; Qwen Image 2.1</span><br>
     Kjørt lokalt på RTX 3090 &middot; ingen skymodeller involvert &middot;
     <a href="{{ '/arkiv/' | relative_url }}">Arkiv</a>
   </footer>
