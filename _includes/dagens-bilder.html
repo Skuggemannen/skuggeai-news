@@ -1,0 +1,22 @@
+{% comment %}Nyhetsbilder for én dag — brukes under hver utgave (post + forside). include.dato = postens date.{% endcomment %}
+{% assign db_dag = include.dato | date: "%Y-%m-%d" %}
+{% assign db_bilder = "" | split: "" %}
+{% for b in site.galleri %}
+  {% assign bd = b.date | date: "%Y-%m-%d" %}
+  {% if bd == db_dag %}{% assign db_bilder = db_bilder | push: b %}{% endif %}
+{% endfor %}
+{% if db_bilder.size > 0 %}
+{% assign db_bilder = db_bilder | sort: "tema" %}
+<aside class="dagens-bilder">
+  <p class="db-eyebrow mono">Dagens nyheter illustrert av Qwen Image 2.1</p>
+  <div class="db-grid">
+  {% for b in db_bilder %}
+    <a class="db-kort" href="{{ '/galleri/' | relative_url }}#{{ db_dag }}-{{ b.tema }}">
+      <img src="{{ b.bilde | relative_url }}" alt="{{ b.title | escape }}" loading="lazy" width="1600" height="1600">
+      <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}</span>
+      <span class="overskrift">{{ b.title }}</span>
+    </a>
+  {% endfor %}
+  </div>
+</aside>
+{% endif %}
