@@ -33,6 +33,7 @@ hide_sidebar: true
           <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}</span>
           <span class="overskrift">{{ b.title }}</span>
           <span class="stil">{{ b.stil }}</span>
+          {% if b.saker and b.saker.size > 0 %}<details><summary class="mono">Saker i bildet</summary><ul class="mono">{% for k in b.saker %}<li>{{ k.motiv | escape }} &larr; {{ k.sak | escape }}</li>{% endfor %}</ul></details>{% endif %}
           <details><summary class="mono">Prompt</summary><p class="mono">{{ b.prompt | escape | newline_to_br }}</p><p class="mono seed">seed {{ b.seed }}</p></details>
         </figcaption>
       </figure>
