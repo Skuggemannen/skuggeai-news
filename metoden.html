@@ -8,14 +8,14 @@ hide_sidebar: true
 
 <div class="dispatch"><h2>Metoden</h2></div>
 
-<p class="lede">Hver natt klokken 02:00 kjører en fullautomatisk redaksjon på lokal maskinvare — <strong>ingen skytjenester, ingen menneskelig redaktør før publisering</strong>. Slik henger stegene sammen, fra rå RSS-tekst til publisert rapport.</p>
+<p class="lede">Hver natt klokken 02:00 kjører en fullautomatisk redaksjon på lokal maskinvare — <strong>ingen skytjenester, ingen menneskelig redaktør før publisering</strong>. Slik henger stegene sammen, fra rå RSS-tekst til publisert rapport — og til slutt et nytt KI-kunstverk per tema, malt ut fra siste døgns nyheter.</p>
 
 <div class="stat-strip">
   <div class="stat"><div class="num mono">82</div><div class="label">RSS-kilder</div></div>
-  <div class="stat"><div class="num mono">~100</div><div class="label">Betrodde domener</div></div>
-  <div class="stat"><div class="num mono">3</div><div class="label">Lokale KI-modeller</div></div>
+  <div class="stat"><div class="num mono">~120</div><div class="label">Betrodde domener</div></div>
+  <div class="stat"><div class="num mono">4</div><div class="label">Lokale KI-modeller</div></div>
   <div class="stat"><div class="num mono">13</div><div class="label">Kontrollpunkter</div></div>
-  <div class="stat"><div class="num mono">~90</div><div class="label">Minutter/natt</div></div>
+  <div class="stat"><div class="num mono">~55</div><div class="label">Minutter/natt</div></div>
   <div class="stat"><div class="num mono">0</div><div class="label">Skytjenester</div></div>
 </div>
 
@@ -65,6 +65,15 @@ hide_sidebar: true
       <h3 class="stage-name">Faktasjekk &amp; publisering</h3>
       <p class="stage-desc">Konkrete påstander i utkastet dobbeltsjekkes mot nye søk før publisering — klare feil rettes automatisk, aldri på gjetning. Sikkerhetssaker med CVE-nummer verifiseres mot en offisiell sårbarhetsdatabase. Til slutt legges rapporten ut, og alle måltall lagres for sporing over tid.</p>
       <p class="stage-meta mono"><b>Qwen3 30B</b> + NVD &middot; faktasjekk &rarr; CVE-sjekk &rarr; GitHub Pages &rarr; kvalitetslogg</p>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-rail"><div class="stage-node">06</div><div class="stage-line"></div></div>
+    <div class="stage-body">
+      <h3 class="stage-name">Dagens bilder</h3>
+      <p class="stage-desc">Når rapporten er ute, lager redaksjonen ett KI-kunstverk per tema ut fra siste døgns nyheter — også dette helt lokalt. En språkmodell leser bare de <em>bekreftede</em> sakene og skriver bildebeskrivelsen: hvilke saker som skal bli motiver, og i hvilken stil og komposisjon. Stil, palett og motiver som er brukt nylig settes i karantene, så bildene blir ulike fra natt til natt. Deretter maler en bildemodell bildet på GPU-serveren, ca. sju minutter per bilde. Hvert motiv er knyttet til saken det bygger på, og vises som «Saker i bildet» i <a href="{{ /galleri/ | relative_url }}">galleriet</a>, som også har egen RSS-strøm.</p>
+      <p class="stage-meta mono"><b>Gemma 4 26B</b> + <b>Qwen Image 2.1</b> &middot; bekreftede saker &rarr; bildebeskrivelse &rarr; ComfyUI &rarr; galleri + RSS</p>
     </div>
   </div>
 
