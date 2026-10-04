@@ -1,0 +1,18 @@
+---
+layout: default
+title: Endringer
+permalink: /endringer/
+hide_sidebar: true
+---
+{% assign mnd_lang = "januar,februar,mars,april,mai,juni,juli,august,september,oktober,november,desember" | split: "," %}
+<h1 class="page-title">Endringer</h1>
+<p class="arkiv-meta">Riggen som lager nyhetene – kode, kilder, prompter, modeller og maskinvarelogikk – får nytt versjonsnummer hver gang noe endres for å forbedre den. Gjeldende versjon: <b class="mono">{{ site.data.rigg.gjeldende }}</b>.</p>
+
+{% for v in site.data.rigg.versjoner %}
+  {% assign d = v.dato | date: "%-d" %}{% assign mi = v.dato | date: "%-m" | plus: 0 | minus: 1 %}
+  <section class="rigg-versjon">
+    <div class="rigg-hode mono"><span class="rigg-nr">{{ v.versjon }}</span> &middot; {{ d }}. {{ mnd_lang[mi] }} {{ v.dato | date: "%Y" }}{% if v.change %} &middot; endring #{{ v.change }}{% endif %}{% if v.git %} &middot; <span class="rigg-git">{{ v.git }}</span>{% endif %}</div>
+    <h2 class="rigg-tittel">{{ v.tekst }}</h2>
+    {% if v.detaljer %}<p>{{ v.detaljer }}</p>{% endif %}
+  </section>
+{% endfor %}

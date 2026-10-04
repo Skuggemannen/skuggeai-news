@@ -339,6 +339,12 @@
   footer.credit a{ color:var(--faint); text-decoration:none; }
   footer.credit a:hover{ color:var(--muted); }
   footer.credit .rig{ color:var(--muted); }
+  /* ---------- Endringer (rigg-versjoner, 4/10-2026) ---------- */
+  .rigg-versjon{ border-top:1px solid var(--faint); padding:1rem 0 .4rem; }
+  .rigg-hode{ font-size:.8rem; color:var(--muted); }
+  .rigg-nr{ color:#f2f5f8; font-weight:700; }
+  .rigg-git{ color:var(--faint); }
+  h2.rigg-tittel{ font-size:1.1rem; margin:.3rem 0 .4rem; }
 
   .ai-varsel{
     max-width:1180px;
@@ -484,6 +490,7 @@
       <a href="{{ '/arkiv/' | relative_url }}"{% if page.url == '/arkiv/' %} class="on"{% endif %}>Arkiv</a>
       <a href="{{ '/galleri/' | relative_url }}"{% if page.url == '/galleri/' %} class="on"{% endif %}>Galleri</a>
       <a href="{{ '/metoden/' | relative_url }}"{% if page.url == '/metoden/' %} class="on"{% endif %}>Metoden</a>
+      <a href="{{ '/endringer/' | relative_url }}"{% if page.url == '/endringer/' %} class="on"{% endif %}>Endringer</a>
     </nav>
     <div class="stamp mono">
       Rapport {{ site.posts.size }} &middot; sist bygget<br>
@@ -523,7 +530,8 @@
   <footer class="credit">
     <span class="rig">Qwen3 30B &middot; Gemma 4 26B &middot; LDR (Qwen3.8 27B) &middot; Qwen Image 2.1</span><br>
     Kjørt lokalt på RTX 3090 &middot; ingen skymodeller involvert &middot;
-    <a href="{{ '/arkiv/' | relative_url }}">Arkiv</a>
+    <a href="{{ '/arkiv/' | relative_url }}">Arkiv</a>{% if site.data.rigg %} &middot;
+    <a href="{{ '/endringer/' | relative_url }}">Rigg {{ site.data.rigg.gjeldende }}</a>{% endif %}
   </footer>
 
   <script>
