@@ -1,0 +1,82 @@
+{
+ "gjeldende": "v4.9",
+ "versjoner": [
+  {
+   "versjon": "v4.9",
+   "dato": "2026-10-04",
+   "tekst": "Historikkfilteret mister ikke lenger saker når svaret blir langt",
+   "detaljer": "Natt til 4. oktober forsvant 35 av 35 kandidater i cybersikkerhet: oppfølgingssjekken hadde et fast svarbudsjett fra juni, svaret ble kuttet, og alt som ikke var besvart ble regnet som gjentakelse. Nå skaleres budsjettet med antall saker, og saker uten svar beholdes. Samme dag: versjonsnummer for hele riggen og denne siden.",
+   "change": 41,
+   "git": "a216655"
+  },
+  {
+   "versjon": "v4.8",
+   "dato": "2026-10-03",
+   "tekst": "Nyhetsarkiv og replay-testbenk",
+   "detaljer": "Alt som hentes og produseres hver natt arkiveres – hel artikkeltekst, LDR-rapporter, søk og alle mellomsteg – slik at en natt kan kjøres på nytt med ny kode og resultatene sammenlignes.",
+   "change": 39,
+   "git": "862da36"
+  },
+  {
+   "versjon": "v4.7",
+   "dato": "2026-10-03",
+   "tekst": "Redaksjonens prinsipper skrevet ned",
+   "detaljer": "Kvalitet slår tid, kun lokale modeller i drift, fakta foran desimaler, viktige hendelser og trender, mistillit som utgangspunkt.",
+   "git": "8edf64d"
+  },
+  {
+   "versjon": "v4.6",
+   "dato": "2026-10-03",
+   "tekst": "30 nye kilder – 82 RSS-feeder",
+   "detaljer": "26 cyberkilder (blant annet NSM, CERT-er og førstehånds trusselforskning) og fire KI-kilder (Microsoft Copilot, Microsoft Norge, Mistral, M365 Roadmap filtrert på Copilot).",
+   "change": 38,
+   "git": "fc77926"
+  },
+  {
+   "versjon": "v4.5",
+   "dato": "2026-10-03",
+   "tekst": "Nattjobbene får ha skjermkortet i fred",
+   "detaljer": "Chat og andre klienter får beskjed om at GPU-en er opptatt i stedet for å kaste ut nattjobbens modell.",
+   "change": 37,
+   "git": "0660754"
+  },
+  {
+   "versjon": "v4.4",
+   "dato": "2026-10-01",
+   "tekst": "Bildene bygger bare på bekreftede saker",
+   "detaljer": "Bildemodellen skrev feil tall, og ett bilde bygde på en ubekreftet sak. Nå får bildeprompten bare bekreftede saker, tall sjekkes mot rapporten, og hvert motiv kobles til en sak («Saker i bildet»).",
+   "change": 35,
+   "git": "0660754"
+  },
+  {
+   "versjon": "v4.3",
+   "dato": "2026-10-01",
+   "tekst": "Én vekkerutine for DAW – ingen jobb legger maskinen i dvale selv",
+   "detaljer": "Natt til 1/10 sovnet DAW igjen ett sekund etter hver vekking, og alle nattjobbene feilet. Nå vekker alle jobber på samme måte, bare én instans styrer dvale, og en ny jobb kl. 05:15 kjører natten på nytt hvis den feilet.",
+   "change": 34,
+   "git": "b34b3e1"
+  },
+  {
+   "versjon": "v4.2",
+   "dato": "2026-09-30",
+   "tekst": "Dagens bilder: én illustrasjon per tema",
+   "detaljer": "Gemma 4 26B skriver bildebeskrivelse fra rapporten, Qwen Image 2.1 maler. Galleri og RSS-feed.",
+   "change": 32,
+   "git": "707dcb8"
+  },
+  {
+   "versjon": "v4.1",
+   "dato": "2026-09-30",
+   "tekst": "Felles GPU-koordinering på DAW",
+   "detaljer": "Natten feilet fordi bildegeneratoren holdt skjermkortet. Nå reserverer hver jobb GPU-en, pipelinen stopper hvis det er under 20 GB ledig, og den gir opp etter tre feil på rad i stedet for å vente ut timeouts i timevis.",
+   "git": "214ca82"
+  },
+  {
+   "versjon": "v4.0",
+   "dato": "2026-09-30",
+   "tekst": "Utgangspunkt: pipeline v4 slik den sto da versjonskontrollen kom",
+   "detaljer": "RSS fra kuraterte kilder + Local Deep Research, uttrekk og verifisering med Qwen3 30B, historikkfilter, énkilde-korroborering, skriving med Gemma 4 26B, faktasjekk med retting før publisering. Pipeline v4 har eksistert siden 30. juni; dette er første versjon med git.",
+   "git": "57a61b5"
+  }
+ ]
+}
