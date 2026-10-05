@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.9",
+ "gjeldende": "v4.10",
  "versjoner": [
+  {
+   "versjon": "v4.10",
+   "dato": "2026-10-05",
+   "tekst": "Dagens bilder lages selv om kontrollen av motiver blir for streng",
+   "detaljer": "Natt til 5. oktober manglet cybersikkerhetsbildet: kontrollen som sikrer at bildet bygger på bekreftede saker, leste ord med bindestrek som ett ord og avviste en sak som faktisk sto i rapporten. Nå deles slike ord, Gemma får fem forsøk i stedet for tre, og finnes det minst to forankrede motiver, lages bildet med dem.",
+   "change": 47,
+   "git": "992553c"
+  },
   {
    "versjon": "v4.9",
    "dato": "2026-10-04",
