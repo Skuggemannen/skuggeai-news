@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.10",
+ "gjeldende": "v4.11",
  "versjoner": [
+  {
+   "versjon": "v4.11",
+   "dato": "2026-10-05",
+   "tekst": "Like saker fra ulike kilder slås sammen hver natt; Digi.no tilbake; versjon på hver utgave",
+   "detaljer": "Steget som slår sammen samme hendelse fra ulike kilder til én bekreftet sak feilet stille i omtrent hver tredje natt, fordi modellen fikk for lite plass til å tenke ferdig. Det har nå god plass, prøver igjen ved tomt svar og logger hva som skjer. Digi.no har fått ny feed-adresse, VentureBeat er tatt ut som kilde (stenger ute alle roboter), og hver utgave viser nå hvilken riggversjon som laget den.",
+   "change": 49,
+   "git": "e9ff324"
+  },
   {
    "versjon": "v4.10",
    "dato": "2026-10-05",
