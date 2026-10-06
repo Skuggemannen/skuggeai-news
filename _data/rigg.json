@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.11",
+ "gjeldende": "v4.12",
  "versjoner": [
+  {
+   "versjon": "v4.12",
+   "dato": "2026-10-06",
+   "tekst": "Saker som ble valgt bort en natt, kan komme med de neste dagene",
+   "detaljer": "Roboten husker nå bare sakene som faktisk sto i utgaven, og først når utgaven er publisert. Før ble alle kandidatene sperret i 14 dager, også de som aldri ble skrevet om. Modellene lastes heller ikke lenger på nytt midt i natta.",
+   "change": 52,
+   "git": "4243b41"
+  },
   {
    "versjon": "v4.11",
    "dato": "2026-10-05",
