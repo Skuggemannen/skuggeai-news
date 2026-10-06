@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.12",
+ "gjeldende": "v4.13",
  "versjoner": [
+  {
+   "versjon": "v4.13",
+   "dato": "2026-10-07",
+   "tekst": "Ny skrivemodell: ubekreftede saker holdes utenfor hoveddelen",
+   "detaljer": "Nyhetene skrives nå av Gemma 4 31B i stedet for 26B. I en test av ti lokale modeller plasserte den tidligere modellen 18 ubekreftede saker blant de bekreftede; den nye gjorde det ingen ganger.",
+   "change": 53,
+   "git": "8c79b7b"
+  },
   {
    "versjon": "v4.12",
    "dato": "2026-10-06",
