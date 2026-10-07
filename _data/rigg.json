@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.17",
+ "gjeldende": "v4.18",
  "versjoner": [
+  {
+   "versjon": "v4.18",
+   "dato": "2026-10-07",
+   "tekst": "Den automatiske faktasjekken er tatt ut",
+   "detaljer": "Etter versjon 4.17 hadde faktasjekken nesten ingen virkning, og dommene den lagret var for upålitelige til å brukes til noe. Den er derfor fjernet helt. Kontrollene som står igjen: en sak står i hoveddelen bare når minst to uavhengige kilder har meldt den, saker med én kilde vises adskilt, og CVE-numre sjekkes mot den offisielle sårbarhetsdatabasen.",
+   "change": 59,
+   "git": "5f493aa"
+  },
   {
    "versjon": "v4.17",
    "dato": "2026-10-07",
