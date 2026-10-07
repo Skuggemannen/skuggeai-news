@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.13",
+ "gjeldende": "v4.14",
  "versjoner": [
+  {
+   "versjon": "v4.14",
+   "dato": "2026-10-07",
+   "tekst": "Mer plass til at modellene tenker ferdig",
+   "detaljer": "Alle språkmodellkall i riggen har nå dobbelt så stor kontekst (32 000 tokens). Tenkesteget kunne bruke opptil 16 000 tokens og fikk ikke alltid plass sammen med sakene det skulle vurdere. Begge modellene ligger fortsatt helt i grafikkminnet. Metodesiden viser nå at nyhetene skrives av Gemma 4 31B.",
+   "change": 55,
+   "git": "ae31118"
+  },
   {
    "versjon": "v4.13",
    "dato": "2026-10-07",
