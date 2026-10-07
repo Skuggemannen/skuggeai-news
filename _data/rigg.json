@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.14",
+ "gjeldende": "v4.15",
  "versjoner": [
+  {
+   "versjon": "v4.15",
+   "dato": "2026-10-07",
+   "tekst": "Ubekreftet-delen viser bare de fem mest relevante sakene",
+   "detaljer": "Saker som bare én kilde har meldt, vises nå som en kort liste med overskrift og kilde, og bare de inntil fem som vurderes som mest relevante for temaet. Før kunne delen vokse til nesten 30 saker i løpende tekst. Saker som ikke kommer med, kan komme tilbake senere dersom en ny kilde bekrefter dem.",
+   "change": 56,
+   "git": "0d9802e"
+  },
   {
    "versjon": "v4.14",
    "dato": "2026-10-07",
