@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.15",
+ "gjeldende": "v4.16",
  "versjoner": [
+  {
+   "versjon": "v4.16",
+   "dato": "2026-10-07",
+   "tekst": "Flere saker bekreftes av en uavhengig kilde",
+   "detaljer": "Når bare én av våre kilder har meldt en sak, søker roboten etter andre medier som dekker den samme hendelsen. Før søkte den med vår norske omskriving av overskriften i et engelsk søk, og godtok bare det første treffet – som ofte var et nettsted vi ikke bruker som kilde. Nå søker den med kildeartikkelens egen tittel, ser på flere treff og godtar enhver kilde fra listen vår som faktisk står i treffene. I test på tre netter ble omtrent dobbelt så mange saker bekreftet.",
+   "change": 57,
+   "git": "c59f17b"
+  },
   {
    "versjon": "v4.15",
    "dato": "2026-10-07",
