@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.16",
+ "gjeldende": "v4.17",
  "versjoner": [
+  {
+   "versjon": "v4.17",
+   "dato": "2026-10-07",
+   "tekst": "Faktasjekken endrer ikke lenger innholdet i teksten",
+   "detaljer": "Den automatiske faktasjekken leter fortsatt etter påstander som kan være feil, men den får ikke lenger skrive om teksten selv. En test på tre netter viste at den oftere gjorde teksten feil enn riktig: den blandet sammen like forkortelser og tall fra andre saker, og «rettet» nye navn den ikke kjente. Nå rettes bare åpenbart ødelagte ord, som et årstall med bokstaver i. Resten lagres og brukes til å måle hvor god faktasjekken er, før den eventuelt får mer ansvar igjen.",
+   "change": 58,
+   "git": "d3f9876"
+  },
   {
    "versjon": "v4.16",
    "dato": "2026-10-07",
