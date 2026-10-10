@@ -490,6 +490,7 @@
     <nav class="mast-nav mono">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="on"{% endif %}>Forsiden</a>
       <a href="{{ '/arkiv/' | relative_url }}"{% if page.url == '/arkiv/' %} class="on"{% endif %}>Arkiv</a>
+<a href="{{ '/v5/' | relative_url }}"{% if page.url contains '/v5/' %} class="on"{% endif %}>v5</a>
       <a href="{{ '/galleri/' | relative_url }}"{% if page.url == '/galleri/' %} class="on"{% endif %}>Galleri</a>
       <a href="{{ '/metoden/' | relative_url }}"{% if page.url == '/metoden/' %} class="on"{% endif %}>Metoden</a>
       <a href="{{ '/endringer/' | relative_url }}"{% if page.url == '/endringer/' %} class="on"{% endif %}>Endringer</a>

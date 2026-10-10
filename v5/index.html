@@ -1,0 +1,14 @@
+---
+layout: default
+title: v5 (eksperimentell)
+permalink: /v5/
+hide_sidebar: true
+---
+<h1 class="page-title">v5 – eksperimentell</h1>
+<p class="arkiv-meta">En ny pipeline som bygges ved siden av den vanlige og kjører i skyggemodus hver natt. Hver sak undersøkes for seg: kildene leses i sin helhet, påstandene kontrolleres mot ordrette sitater, og «bekreftet» krever minst to uavhengige kilder eller aktørens egen kunngjøring. En uavhengig vurdering sammenligner den med den vanlige utgaven hver natt. Utgavene her er ikke ferdig utviklet og publiseres for sammenligning.</p>
+{% assign utgaver = site.v5 | sort: "date" | reverse %}
+<ul class="v5-liste">
+{% for u in utgaver %}
+  <li><a href="{{ u.url | relative_url }}">{{ u.title }}</a></li>
+{% endfor %}
+</ul>
