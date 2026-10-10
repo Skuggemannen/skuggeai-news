@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.18",
+ "gjeldende": "v4.19",
  "versjoner": [
+  {
+   "versjon": "v4.19",
+   "dato": "2026-10-10",
+   "tekst": "Nettsiden har fått en egen seksjon for den eksperimentelle v5-utgaven (/v5/). SearXNG-containeren er oppdatert.",
+   "change": 76,
+   "git": "7f729f5"
+  },
   {
    "versjon": "v4.18",
    "dato": "2026-10-07",
