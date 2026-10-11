@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.20",
+ "gjeldende": "v4.21",
  "versjoner": [
+  {
+   "versjon": "v4.21",
+   "dato": "2026-10-11",
+   "tekst": "Bedre intern overvåking av nyhetskildene.",
+   "change": 81,
+   "git": "c6d3a89"
+  },
   {
    "versjon": "v4.20",
    "dato": "2026-10-11",
