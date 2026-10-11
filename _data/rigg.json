@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.24",
+ "gjeldende": "v4.25",
  "versjoner": [
+  {
+   "versjon": "v4.25",
+   "dato": "2026-10-11",
+   "tekst": "Søket etter bekreftende kilder er gjort mer robust.",
+   "change": 87,
+   "git": "495d9a5"
+  },
   {
    "versjon": "v4.24",
    "dato": "2026-10-11",
