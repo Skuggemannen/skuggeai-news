@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.28",
+ "gjeldende": "v4.29",
  "versjoner": [
+  {
+   "versjon": "v4.29",
+   "dato": "2026-10-11",
+   "tekst": "Søkereserve nr. 2 er tatt i bruk.",
+   "change": 92,
+   "git": "80b4984"
+  },
   {
    "versjon": "v4.28",
    "dato": "2026-10-11",
