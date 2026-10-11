@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.29",
+ "gjeldende": "v4.30",
  "versjoner": [
+  {
+   "versjon": "v4.30",
+   "dato": "2026-10-11",
+   "tekst": "Exa er aktivert som reservesøk nr. 3.",
+   "change": 92,
+   "git": "04b8ed2"
+  },
   {
    "versjon": "v4.29",
    "dato": "2026-10-11",
