@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.22",
+ "gjeldende": "v4.23",
  "versjoner": [
+  {
+   "versjon": "v4.23",
+   "dato": "2026-10-11",
+   "tekst": "Tillitslisten er utvidet til 352 domener etter en gjennomgang av hele prospektlista, og 142 støydomener er svartelistet.",
+   "change": 84,
+   "git": "39dda36"
+  },
   {
    "versjon": "v4.22",
    "dato": "2026-10-11",
