@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.19",
+ "gjeldende": "v4.20",
  "versjoner": [
+  {
+   "versjon": "v4.20",
+   "dato": "2026-10-11",
+   "tekst": "Tillitslisten er utvidet med 36 kilder (myndigheter, store redaksjoner, fagpresse og norske aviser), og 44 støydomener er svartelistet.",
+   "change": 79,
+   "git": "9028e61"
+  },
   {
    "versjon": "v4.19",
    "dato": "2026-10-10",
