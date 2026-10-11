@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.23",
+ "gjeldende": "v4.24",
  "versjoner": [
+  {
+   "versjon": "v4.24",
+   "dato": "2026-10-11",
+   "tekst": "nsr-org.no (Næringslivets Sikkerhetsråd) er lagt til som norsk primærkilde.",
+   "change": 86,
+   "git": "43bf18c"
+  },
   {
    "versjon": "v4.23",
    "dato": "2026-10-11",
