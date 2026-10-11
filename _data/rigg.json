@@ -1,6 +1,12 @@
 {
- "gjeldende": "v4.30",
+ "gjeldende": "v4.31",
  "versjoner": [
+  {
+   "versjon": "v4.31",
+   "dato": "2026-10-11",
+   "tekst": "Endringssiden viser endringene samlet per dag.",
+   "git": "adf91c3"
+  },
   {
    "versjon": "v4.30",
    "dato": "2026-10-11",
