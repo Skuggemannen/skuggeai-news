@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.27",
+ "gjeldende": "v4.28",
  "versjoner": [
+  {
+   "versjon": "v4.28",
+   "dato": "2026-10-11",
+   "tekst": "Flere reserver for søket når de vanlige søkemotorene ikke gir treff.",
+   "change": 92,
+   "git": "fb9af2c"
+  },
   {
    "versjon": "v4.27",
    "dato": "2026-10-11",
