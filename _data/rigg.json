@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.21",
+ "gjeldende": "v4.22",
  "versjoner": [
+  {
+   "versjon": "v4.22",
+   "dato": "2026-10-11",
+   "tekst": "36 nye RSS-feeder fra feed-revisjonen: journalistikk, CERT-er, trusselforskning, uavhengige KI-stemmer, store redaksjoner og nordisk fagpresse (117 aktive).",
+   "change": 83,
+   "git": "c73c6a0"
+  },
   {
    "versjon": "v4.21",
    "dato": "2026-10-11",
