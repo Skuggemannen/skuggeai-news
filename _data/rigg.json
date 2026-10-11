@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.25",
+ "gjeldende": "v4.26",
  "versjoner": [
+  {
+   "versjon": "v4.26",
+   "dato": "2026-10-11",
+   "tekst": "Søket etter bekreftende kilder bruker flere søkemotorer igjen.",
+   "change": 89,
+   "git": "d7fc8f7"
+  },
   {
    "versjon": "v4.25",
    "dato": "2026-10-11",
