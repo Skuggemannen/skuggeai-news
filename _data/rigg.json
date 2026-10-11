@@ -10,7 +10,7 @@
   {
    "versjon": "v4.30",
    "dato": "2026-10-11",
-   "tekst": "Exa er aktivert som reservesøk nr. 3.",
+   "tekst": "Søkereserve nr. 3 er tatt i bruk.",
    "change": 92,
    "git": "04b8ed2"
   },
@@ -52,21 +52,21 @@
   {
    "versjon": "v4.24",
    "dato": "2026-10-11",
-   "tekst": "nsr-org.no (Næringslivets Sikkerhetsråd) er lagt til som norsk primærkilde.",
+   "tekst": "Næringslivets Sikkerhetsråd teller som norsk primærkilde.",
    "change": 86,
    "git": "43bf18c"
   },
   {
    "versjon": "v4.23",
    "dato": "2026-10-11",
-   "tekst": "Tillitslisten er utvidet til 352 domener etter en gjennomgang av hele prospektlista, og 142 støydomener er svartelistet.",
+   "tekst": "Kildeutvalget er gjennomgått: flere anerkjente kilder teller som bekreftelse, og nettsteder som bare gjengir andre er tatt ut.",
    "change": 84,
    "git": "39dda36"
   },
   {
    "versjon": "v4.22",
    "dato": "2026-10-11",
-   "tekst": "36 nye RSS-feeder fra feed-revisjonen: journalistikk, CERT-er, trusselforskning, uavhengige KI-stemmer, store redaksjoner og nordisk fagpresse (117 aktive).",
+   "tekst": "Flere nyhetskilder: journalistikk, nasjonale sikkerhetsmyndigheter, sikkerhetsforskning, KI-fagmiljøer, store redaksjoner og nordisk fagpresse.",
    "change": 83,
    "git": "c73c6a0"
   },
@@ -80,7 +80,7 @@
   {
    "versjon": "v4.20",
    "dato": "2026-10-11",
-   "tekst": "Tillitslisten er utvidet med 36 kilder (myndigheter, store redaksjoner, fagpresse og norske aviser), og 44 støydomener er svartelistet.",
+   "tekst": "Flere troverdige kilder teller som bekreftelse: myndigheter, store redaksjoner, fagpresse og norske aviser.",
    "change": 79,
    "git": "9028e61"
   },
