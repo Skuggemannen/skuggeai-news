@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.31",
+ "gjeldende": "v4.32",
  "versjoner": [
+  {
+   "versjon": "v4.32",
+   "dato": "2026-10-12",
+   "tekst": "Flere kilder kan nå leses i fulltekst, blant annet offentlige sikkerhetsvarsler.",
+   "change": 96,
+   "git": "d6e88bc"
+  },
   {
    "versjon": "v4.31",
    "dato": "2026-10-11",
