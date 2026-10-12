@@ -451,7 +451,17 @@
   .tema{ font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; }
   .tema-ai{ color:var(--signal); }
   .tema-sec{ color:var(--alert); }
-  .galleri-dag{ margin-bottom:3.2rem; }
+  .galleri-dag{ margin-bottom:3.2rem; scroll-margin-top:1rem; }
+  /* Hopp til dato (12/10): samme rader som Arkiv, flytende lenke tilbake */
+  nav.galleri-nav{ margin:1.6rem 0 2.6rem; scroll-margin-top:1rem; }
+  nav.galleri-nav .arkiv-rad .maned{ flex-basis:3.6rem; }
+  a.til-datoer{
+    position:fixed; right:1.25rem; bottom:1.25rem; z-index:10;
+    font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; text-decoration:none;
+    color:var(--muted); background:var(--panel); border:1px solid var(--line);
+    padding:.5rem .75rem; border-radius:2px;
+  }
+  a.til-datoer:hover{ color:var(--ink); background:var(--signal); border-color:var(--signal); }
   .galleri-dag h2.ar-tall{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
   a.til-nyheter{ font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-decoration:none; font-weight:500; }
   a.til-nyheter:hover{ color:var(--signal); }

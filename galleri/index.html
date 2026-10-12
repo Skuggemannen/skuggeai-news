@@ -11,6 +11,28 @@ hide_sidebar: true
 {% if bilder.size == 0 %}
   <p>Ingen bilder ennå — første kommer etter neste nattkjøring.</p>
 {% endif %}
+{% assign mnd_kort = "JAN,FEB,MAR,APR,MAI,JUN,JUL,AUG,SEP,OKT,NOV,DES" | split: "," %}
+{% if bilder.size > 0 %}
+<nav class="galleri-nav" id="datoer" aria-label="Hopp til dato">
+  <p class="db-eyebrow">Hopp til dato</p>
+  {% assign per_mnd = bilder | group_by_exp: "b", "b.date | date: '%Y-%m'" %}
+  {% for m in per_mnd %}
+    {% assign m0 = m.items | first %}
+    {% assign mi = m0.date | date: "%-m" | minus: 1 %}
+    <div class="arkiv-rad">
+      <span class="maned">{{ mnd_kort[mi] }} {{ m0.date | date: "%y" }}</span>
+      <div class="dager">
+        {% assign m_dager = m.items | sort: "date" | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
+        {% for d in m_dager %}
+        <a class="dag" href="#dag-{{ d.name }}" title="{{ d.items | size }} bilder">{{ d.items.first.date | date: "%-d" }}</a>
+        {% endfor %}
+      </div>
+      <span class="antall">{{ m.items | size }}</span>
+    </div>
+  {% endfor %}
+</nav>
+<a class="til-datoer mono" href="#datoer">&uarr; Datoer</a>
+{% endif %}
 {% assign dager = bilder | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
 {% for dag in dager %}
   {% assign d0 = dag.items | first %}
@@ -20,7 +42,7 @@ hide_sidebar: true
     {% assign pd = p.date | date: "%Y-%m-%d" %}
     {% if pd == dag.name %}{% assign post_url = p.url %}{% break %}{% endif %}
   {% endfor %}
-  <section class="galleri-dag">
+  <section class="galleri-dag" id="dag-{{ dag.name }}">
     <h2 class="ar-tall">{{ d0.date | date: "%-d" }}. {{ mnd_lang[mi] }} {{ d0.date | date: "%Y" }}
       {% if post_url %}<a class="til-nyheter mono" href="{{ post_url | relative_url }}">Les dagens nyheter &rarr;</a>{% endif %}
     </h2>
