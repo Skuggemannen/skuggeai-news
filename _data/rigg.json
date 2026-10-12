@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.33",
+ "gjeldende": "v4.34",
  "versjoner": [
+  {
+   "versjon": "v4.34",
+   "dato": "2026-10-12",
+   "tekst": "Galleriet har fått en navigasjon øverst, så man kan hoppe rett til en dato.",
+   "change": 99,
+   "git": "36bb84d"
+  },
   {
    "versjon": "v4.33",
    "dato": "2026-10-12",
