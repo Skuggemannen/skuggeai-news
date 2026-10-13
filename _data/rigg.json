@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.36",
+ "gjeldende": "v4.37",
  "versjoner": [
+  {
+   "versjon": "v4.37",
+   "dato": "2026-10-13",
+   "tekst": "Tall og årstall i utgaven sammenlignes nå med kildene. Foreløpig måles det bare; teksten endres ikke.",
+   "change": 100,
+   "git": "f34c851"
+  },
   {
    "versjon": "v4.36",
    "dato": "2026-10-13",
