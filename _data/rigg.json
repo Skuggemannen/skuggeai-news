@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.34",
+ "gjeldende": "v4.35",
  "versjoner": [
+  {
+   "versjon": "v4.35",
+   "dato": "2026-10-13",
+   "tekst": "Også saker fra dypdykket sjekkes nå mot det som er dekket tidligere netter.",
+   "change": 98,
+   "git": "16f1c3c"
+  },
   {
    "versjon": "v4.34",
    "dato": "2026-10-12",
