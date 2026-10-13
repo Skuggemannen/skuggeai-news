@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.35",
+ "gjeldende": "v4.36",
  "versjoner": [
+  {
+   "versjon": "v4.36",
+   "dato": "2026-10-13",
+   "tekst": "Når samme gamle sak blir delt i flere biter samme natt, tas nå alle bitene ut, ikke bare den største.",
+   "change": 98,
+   "git": "ceb05cd"
+  },
   {
    "versjon": "v4.35",
    "dato": "2026-10-13",
