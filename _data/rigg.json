@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.37",
+ "gjeldende": "v4.38",
  "versjoner": [
+  {
+   "versjon": "v4.38",
+   "dato": "2026-10-14",
+   "tekst": "En sak som har vært stille noen dager og dukker opp igjen med bred dekning fra flere uavhengige kilder, regnes nå som ny hendelse og ikke som gjentakelse.",
+   "change": 102,
+   "git": "d7ff6e0"
+  },
   {
    "versjon": "v4.37",
    "dato": "2026-10-13",
