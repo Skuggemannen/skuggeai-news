@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.38",
+ "gjeldende": "v4.39",
  "versjoner": [
+  {
+   "versjon": "v4.39",
+   "dato": "2026-10-14",
+   "tekst": "Den eksperimentelle utgaven slår nå sammen flere omtaler av samme lansering også når de omtaler selskapet med ulike navn.",
+   "change": 103,
+   "git": "61b185c"
+  },
   {
    "versjon": "v4.38",
    "dato": "2026-10-14",
