@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.0",
+ "gjeldende": "v5.1",
  "versjoner": [
+  {
+   "versjon": "v5.1",
+   "dato": "2026-10-16",
+   "tekst": "Rettelser i nattens rekkefølge etter overgangen til den nye arbeidsmåten",
+   "change": 109,
+   "git": "7dc1b02"
+  },
   {
    "versjon": "v5.0",
    "dato": "2026-10-16",
