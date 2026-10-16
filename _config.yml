@@ -7,7 +7,7 @@ paginate_path: "/side:num/"
 collections:
   galleri:
     output: false
-  v5:                       # eksperimentell v5-utgave (10/10-2026), egen seksjon, ikke på forsiden/RSS
+  v5:                       # utprøvingen av den saksvise metoden 10.–16/10-2026 (arkiv); fra 17/10 er den forsiden
     output: true
     permalink: /v5/:name/
 plugins:

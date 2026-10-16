@@ -211,6 +211,19 @@
     border-bottom:1px solid var(--line-dim);
   }
   .unconfirmed-body{ font-style:italic; color:var(--muted); }
+
+  /* Saksvise utgaver (fra 17/10-2026): én overskrift per sak + kildelinje satt av programkode */
+  .dispatch h4{
+    font-size:1.08rem; font-weight:600; line-height:1.35; color:#f2f5f8;
+    margin:2rem 0 .55rem; max-width:38em; text-wrap:balance;
+  }
+  .dispatch small.kilder{
+    display:block; margin-top:.35rem;
+    font-family:'IBM Plex Mono', monospace; font-size:.68rem; line-height:1.6;
+    color:var(--muted);
+  }
+  .dispatch small.kilder a{ color:var(--muted); }
+  ul.unconfirmed-body li small{ font-style:normal; font-family:'IBM Plex Mono', monospace; font-size:.68rem; }
   .unconfirmed-body.mono{ font-style:normal; }
   ul.unconfirmed-body li{ font-style:italic; color:var(--muted); }
 
@@ -500,13 +513,12 @@
     <nav class="mast-nav mono">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="on"{% endif %}>Forsiden</a>
       <a href="{{ '/arkiv/' | relative_url }}"{% if page.url == '/arkiv/' %} class="on"{% endif %}>Arkiv</a>
-<a href="{{ '/v5/' | relative_url }}"{% if page.url contains '/v5/' %} class="on"{% endif %}>v5</a>
       <a href="{{ '/galleri/' | relative_url }}"{% if page.url == '/galleri/' %} class="on"{% endif %}>Galleri</a>
       <a href="{{ '/metoden/' | relative_url }}"{% if page.url == '/metoden/' %} class="on"{% endif %}>Metoden</a>
       <a href="{{ '/endringer/' | relative_url }}"{% if page.url == '/endringer/' %} class="on"{% endif %}>Endringer</a>
     </nav>
     <div class="stamp mono">
-      Rapport {{ site.posts.size }} &middot; sist bygget<br>
+      Utgave {{ site.posts.size }} &middot; sist bygget<br>
       <b>{{ site.time | date: "%d.%m.%Y &middot; %H:%M" }}</b>
     </div>
   </div>
@@ -525,7 +537,9 @@
       {% for post in tidligere %}
         {% assign plain = post.content | strip_html | strip_newlines %}
         {% assign deler = plain | split: "Sammendrag:" %}
-        {% if deler.size > 1 %}
+        {% if post.teaser %}
+          {% assign teaser = post.teaser | truncatewords: 22 %}
+        {% elsif deler.size > 1 %}
           {% assign teaser = deler[1] | strip | truncatewords: 22 %}
         {% else %}
           {% assign teaser = plain | truncatewords: 22 %}
@@ -541,7 +555,7 @@
   </div>
 
   <footer class="credit">
-    <span class="rig">Qwen3 30B &middot; Gemma 4 31B (tekst) &middot; Gemma 4 26B (bilder) &middot; LDR (Qwen3.8 27B) &middot; Qwen Image 2.1</span><br>
+    <span class="rig">Qwen3 30B (undersøkelse) &middot; Gemma 4 31B (tekst) &middot; Qwen3 Embedding 8B (gruppering) &middot; LDR (Qwen3.8 27B) &middot; Gemma 4 26B + Qwen Image 2.1 (bilder)</span><br>
     Kjørt lokalt på RTX 3090 &middot; ingen skymodeller involvert &middot;
     <a href="{{ '/arkiv/' | relative_url }}">Arkiv</a>{% if site.data.rigg %} &middot;
     <a href="{{ '/endringer/' | relative_url }}">Rigg {{ site.data.rigg.gjeldende }}</a>{% endif %}
