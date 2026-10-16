@@ -1,6 +1,14 @@
 {
- "gjeldende": "v4.40",
+ "gjeldende": "v5.0",
  "versjoner": [
+  {
+   "versjon": "v5.0",
+   "dato": "2026-10-16",
+   "tekst": "Ny arbeidsmåte: hver sak undersøkes og skrives for seg, med kildelenker og ordrette sitater som grunnlag",
+   "detaljer": "Utgaven lages nå sak for sak. Artikler om samme hendelse samles, hver hendelse undersøkes mot kildene, og bare påstander med ordrette sitater skrives. Bekreftet betyr minst to uavhengige kilder eller aktørens egen kunngjøring. Metoden ble prøvd ut ved siden av den forrige fra 10. oktober. Se Metoden.",
+   "change": 109,
+   "git": "acb8608"
+  },
   {
    "versjon": "v4.40",
    "dato": "2026-10-16",
