@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.1",
+ "gjeldende": "v5.2",
  "versjoner": [
+  {
+   "versjon": "v5.2",
+   "dato": "2026-10-16",
+   "tekst": "Hele nattløypa er nå én sammenhengende kjøring, fra innhenting til publisering",
+   "change": 109,
+   "git": "dfb980e"
+  },
   {
    "versjon": "v5.1",
    "dato": "2026-10-16",
