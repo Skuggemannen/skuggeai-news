@@ -1,6 +1,13 @@
 {
- "gjeldende": "v4.39",
+ "gjeldende": "v4.40",
  "versjoner": [
+  {
+   "versjon": "v4.40",
+   "dato": "2026-10-16",
+   "tekst": "Ny automatisk kontroll i den eksperimentelle utgaven: tall, årstall og navn sammenlignes med kildeteksten (foreløpig bare registrering)",
+   "change": 108,
+   "git": "199a8a6"
+  },
   {
    "versjon": "v4.39",
    "dato": "2026-10-14",
