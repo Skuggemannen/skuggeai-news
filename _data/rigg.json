@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.9",
+ "gjeldende": "v5.10",
  "versjoner": [
+  {
+   "versjon": "v5.10",
+   "dato": "2026-10-17",
+   "tekst": "Forskningsagenten får ikke lenger mer tekst enn modellen kan lese om gangen.",
+   "change": 118,
+   "git": "e1be0b7"
+  },
   {
    "versjon": "v5.9",
    "dato": "2026-10-17",
