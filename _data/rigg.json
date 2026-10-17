@@ -1,6 +1,14 @@
 {
- "gjeldende": "v5.5",
+ "gjeldende": "v5.6",
  "versjoner": [
+  {
+   "versjon": "v5.6",
+   "dato": "2026-10-17",
+   "tekst": "Saker som allerede sto i en tidligere utgave, stoppes nå når de bygger på samme kilde eller nesten samme originaltittel. Toppfeltet på nettsiden blir stående når du blar.",
+   "detaljer": "Change#116 (gjentakelse mot publiserte kilder) og Change#115 (fast toppfelt).",
+   "change": 116,
+   "git": "4ddd310"
+  },
   {
    "versjon": "v5.5",
    "dato": "2026-10-17",
