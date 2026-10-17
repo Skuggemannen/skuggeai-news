@@ -77,7 +77,12 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* Mastheaden står fast i toppen ved scrolling (17/10). Høyden ligger i --mast-h (settes av skriptet nederst),
+     så sticky sidefelt, galleriets ukeliste og ankerhopp havner under den, ikke bak den. */
+  html{ scroll-padding-top:calc(var(--mast-h, 0px) + .75rem); }
   .masthead{
+    position:sticky; top:0; z-index:20;
+    background:var(--ink);
     border-bottom:1px solid var(--line);
     padding:1.1rem 2.5rem;
     display:flex;
@@ -311,7 +316,7 @@
 
   /* ---------- Sidefelt: tidligere utgaver ---------- */
   aside.sidefelt{
-    position:sticky; top:2.5rem;
+    position:sticky; top:calc(var(--mast-h, 0px) + 1rem);
     padding-top:2.4rem;
     border-left:1px solid var(--line);
     padding-left:2rem;
@@ -392,6 +397,14 @@
   .mast-nav a{ color:var(--muted); text-decoration:none; }
   .mast-nav a:hover{ color:var(--text); }
   .mast-nav a.on{ color:var(--signal); }
+  @media (max-width:600px){
+    /* Kompakt sticky header på mobil: bare navn og meny; menyen er én linje som kan rulles sidelengs */
+    .masthead{ padding:.6rem 1.25rem; gap:.35rem; flex-direction:column; align-items:stretch; }
+    .masthead .tagline, .masthead .stamp{ display:none; }
+    .masthead .title{ font-size:1.25rem; }
+    .mast-nav{ gap:1.1rem; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }
+    .mast-nav::-webkit-scrollbar{ display:none; }
+  }
 
   .avis.full{ grid-template-columns: 1fr; max-width:860px; }
 
@@ -471,7 +484,7 @@
   .galleri-ramme{ display:grid; grid-template-columns:8.5rem minmax(0,1fr); gap:2.5rem; align-items:start; margin-top:1.6rem; }
   .galleri-innhold{ min-width:0; }
   nav.galleri-uker{
-    position:sticky; top:1rem; max-height:calc(100vh - 2rem); overflow-y:auto;
+    position:sticky; top:calc(var(--mast-h, 0px) + 1rem); max-height:calc(100vh - var(--mast-h, 0px) - 2rem); overflow-y:auto;
     scrollbar-width:thin; scrollbar-color:var(--line) transparent; padding-right:.3rem;
   }
   nav.galleri-uker .db-eyebrow{ margin-bottom:.4rem; }
@@ -491,7 +504,7 @@
   @media (max-width:860px){
     .galleri-ramme{ grid-template-columns:1fr; gap:1.2rem; margin-top:1rem; }
     nav.galleri-uker{
-      top:0; z-index:5; max-height:none; overflow-x:auto; overflow-y:hidden;
+      top:var(--mast-h, 0px); z-index:5; max-height:none; overflow-x:auto; overflow-y:hidden;
       display:flex; align-items:center; gap:.35rem; white-space:nowrap;
       margin:0 -1.25rem; padding:.6rem 1.25rem; background:var(--ink); border-bottom:1px solid var(--line);
     }
@@ -590,6 +603,14 @@
   </footer>
 
   <script>
+  // Mastheadens høyde til --mast-h (sticky header, se CSS); følger med ved endret bredde og fontlasting
+  (function(){
+    var m = document.querySelector('.masthead');
+    if (!m) return;
+    function sett(){ document.documentElement.style.setProperty('--mast-h', m.offsetHeight + 'px'); }
+    sett();
+    if ('ResizeObserver' in window) new ResizeObserver(sett).observe(m); else window.addEventListener('resize', sett);
+  })();
   (function(){
     document.querySelectorAll('.dispatch').forEach(function(dispatch){
       var sawTitle = false;
