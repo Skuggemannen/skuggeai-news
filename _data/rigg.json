@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.3",
+ "gjeldende": "v5.4",
  "versjoner": [
+  {
+   "versjon": "v5.4",
+   "dato": "2026-10-17",
+   "tekst": "Galleriet har fått ukeliste i sidekolonnen i stedet for datoknapper",
+   "change": 112,
+   "git": "7999888"
+  },
   {
    "versjon": "v5.3",
    "dato": "2026-10-17",
