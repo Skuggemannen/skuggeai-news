@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.8",
+ "gjeldende": "v5.9",
  "versjoner": [
+  {
+   "versjon": "v5.9",
+   "dato": "2026-10-17",
+   "tekst": "Bunnteksten og metodesiden viser nå alle sju lokale modeller.",
+   "change": 117,
+   "git": "9b4eb2f"
+  },
   {
    "versjon": "v5.8",
    "dato": "2026-10-17",
