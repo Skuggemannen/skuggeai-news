@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.7",
+ "gjeldende": "v5.8",
  "versjoner": [
+  {
+   "versjon": "v5.8",
+   "dato": "2026-10-17",
+   "tekst": "Metodesiden beskriver nå steget som vurderer om en sak melder noe nytt.",
+   "change": 117,
+   "git": "b5b1c99"
+  },
   {
    "versjon": "v5.7",
    "dato": "2026-10-17",
