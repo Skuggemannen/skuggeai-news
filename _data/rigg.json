@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.2",
+ "gjeldende": "v5.3",
  "versjoner": [
+  {
+   "versjon": "v5.3",
+   "dato": "2026-10-17",
+   "tekst": "Nattløypa starter behandlingen straks innhentingen er ferdig, i stedet for å vente på ledig regnekraft",
+   "change": 111,
+   "git": "89cc100"
+  },
   {
    "versjon": "v5.2",
    "dato": "2026-10-16",
