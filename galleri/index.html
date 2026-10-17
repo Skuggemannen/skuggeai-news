@@ -3,36 +3,40 @@ layout: default
 title: Galleri
 permalink: /galleri/
 hide_sidebar: true
+bred: true
 ---
 {% assign mnd_lang = "januar,februar,mars,april,mai,juni,juli,august,september,oktober,november,desember" | split: "," %}
+{% assign mnd_kort = "JAN,FEB,MAR,APR,MAI,JUN,JUL,AUG,SEP,OKT,NOV,DES" | split: "," %}
 <h1 class="page-title">Galleri</h1>
 <p class="arkiv-meta">Nattens nyheter tolket av Gemma 4 26B &middot; malt av Qwen Image 2.1 &middot; lokalt på RTX 3090 &middot; <a href="{{ '/galleri/feed.xml' | relative_url }}">RSS</a></p>
 {% assign bilder = site.galleri | sort: "date" | reverse %}
 {% if bilder.size == 0 %}
   <p>Ingen bilder ennå — første kommer etter neste nattkjøring.</p>
 {% endif %}
-{% assign mnd_kort = "JAN,FEB,MAR,APR,MAI,JUN,JUL,AUG,SEP,OKT,NOV,DES" | split: "," %}
+<div class="galleri-ramme">
 {% if bilder.size > 0 %}
-<nav class="galleri-nav" id="datoer" aria-label="Hopp til dato">
-  <p class="db-eyebrow">Hopp til dato</p>
-  {% assign per_mnd = bilder | group_by_exp: "b", "b.date | date: '%Y-%m'" %}
-  {% for m in per_mnd %}
-    {% assign m0 = m.items | first %}
-    {% assign mi = m0.date | date: "%-m" | minus: 1 %}
-    <div class="arkiv-rad">
-      <span class="maned">{{ mnd_kort[mi] }} {{ m0.date | date: "%y" }}</span>
-      <div class="dager">
-        {% assign m_dager = m.items | sort: "date" | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
-        {% for d in m_dager %}
-        <a class="dag" href="#dag-{{ d.name }}" title="{{ d.items | size }} bilder">{{ d.items.first.date | date: "%-d" }}</a>
-        {% endfor %}
-      </div>
-      <span class="antall">{{ m.items | size }}</span>
-    </div>
+<nav class="galleri-uker" id="uker" aria-label="Hopp til uke">
+  <p class="db-eyebrow">Uker</p>
+  {% comment %}ISO-uker (17/10-2026): én lenke per uke til uas nyeste dag; månedsoverskrift når måneden skifter{% endcomment %}
+  {% assign uker = bilder | group_by_exp: "b", "b.date | date: '%G-W%V'" %}
+  {% assign forrige_mnd = "" %}
+  {% for u in uker %}
+    {% assign nyeste = u.items | first %}
+    {% assign eldste = u.items | last %}
+    {% assign mnd = nyeste.date | date: "%Y-%m" %}
+    {% if mnd != forrige_mnd %}
+      {% assign mi = nyeste.date | date: "%-m" | minus: 1 %}
+      <span class="maned mono">{{ mnd_kort[mi] }} {{ nyeste.date | date: "%y" }}</span>
+      {% assign forrige_mnd = mnd %}
+    {% endif %}
+    <a class="uke" href="#dag-{{ nyeste.date | date: '%Y-%m-%d' }}" data-uke="{{ u.name }}" title="{{ u.items | size }} bilder">
+      <span class="uke-nr">Uke {{ nyeste.date | date: "%V" }}</span>
+      <span class="uke-dager">{{ eldste.date | date: "%-d" }}.–{{ nyeste.date | date: "%-d" }}.</span>
+    </a>
   {% endfor %}
 </nav>
-<a class="til-datoer mono" href="#datoer">&uarr; Datoer</a>
 {% endif %}
+<div class="galleri-innhold">
 {% assign dager = bilder | group_by_exp: "b", "b.date | date: '%Y-%m-%d'" %}
 {% for dag in dager %}
   {% assign d0 = dag.items | first %}
@@ -42,7 +46,7 @@ hide_sidebar: true
     {% assign pd = p.date | date: "%Y-%m-%d" %}
     {% if pd == dag.name %}{% assign post_url = p.url %}{% break %}{% endif %}
   {% endfor %}
-  <section class="galleri-dag" id="dag-{{ dag.name }}">
+  <section class="galleri-dag" id="dag-{{ dag.name }}" data-uke="{{ d0.date | date: '%G-W%V' }}">
     <h2 class="ar-tall">{{ d0.date | date: "%-d" }}. {{ mnd_lang[mi] }} {{ d0.date | date: "%Y" }}
       {% if post_url %}<a class="til-nyheter mono" href="{{ post_url | relative_url }}">Les dagens nyheter &rarr;</a>{% endif %}
     </h2>
@@ -52,7 +56,7 @@ hide_sidebar: true
       <figure class="galleri-kort" id="{{ b.date | date: '%Y-%m-%d' }}-{{ b.tema }}">
         <a href="{{ b.bilde | relative_url }}"><img src="{{ b.bilde | relative_url }}" alt="{{ b.title | escape }}" loading="lazy" width="1600" height="1600"></a>
         <figcaption>
-          <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}</span>
+          <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}{% if b.bildemodell %} <span class="modell">&middot; {{ b.bildemodell }}</span>{% endif %}</span>
           <span class="overskrift">{{ b.title }}</span>
           <span class="stil">{{ b.stil }}</span>
           {% if b.saker and b.saker.size > 0 %}<details><summary class="mono">Saker i bildet</summary><ul class="mono">{% for k in b.saker %}<li>{{ k.motiv | escape }} &larr; {{ k.sak | escape }}</li>{% endfor %}</ul></details>{% endif %}
@@ -63,3 +67,32 @@ hide_sidebar: true
     </div>
   </section>
 {% endfor %}
+</div>
+</div>
+<script>
+// Marker uka som er i bildet og hold den synlig i ukelista (sidekolonne på PC, stripe på mobil)
+(function(){
+  var nav = document.getElementById('uker');
+  if (!nav) return;
+  var lenker = {};
+  nav.querySelectorAll('a.uke').forEach(function(a){ lenker[a.dataset.uke] = a; });
+  var dager = Array.prototype.slice.call(document.querySelectorAll('.galleri-dag'));
+  var aktiv = null, venter = false;
+  // Uka til den siste dagen som har passert 35 % av vinduet (ellers den første dagen)
+  function marker(){
+    venter = false;
+    var grense = window.innerHeight * 0.35, valgt = dager[0];
+    for (var i = 0; i < dager.length && dager[i].getBoundingClientRect().top <= grense; i++) valgt = dager[i];
+    var a = valgt && lenker[valgt.dataset.uke];
+    if (!a || a === aktiv) return;
+    if (aktiv) aktiv.classList.remove('on');
+    a.classList.add('on'); aktiv = a;
+    if (nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - nav.clientWidth / 2 + a.offsetWidth / 2;
+    else nav.scrollTop = a.offsetTop - nav.clientHeight / 2;
+  }
+  function planlegg(){ if (!venter) { venter = true; requestAnimationFrame(marker); } }
+  window.addEventListener('scroll', planlegg, { passive: true });
+  window.addEventListener('resize', planlegg);
+  marker();
+})();
+</script>
