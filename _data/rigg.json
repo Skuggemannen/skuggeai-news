@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.4",
+ "gjeldende": "v5.5",
  "versjoner": [
+  {
+   "versjon": "v5.5",
+   "dato": "2026-10-17",
+   "tekst": "Nattløypa måler nå energiforbruket per steg, og bildene lages med full presisjon i bildemodellen",
+   "change": 114,
+   "git": "db0bc53"
+  },
   {
    "versjon": "v5.4",
    "dato": "2026-10-17",
