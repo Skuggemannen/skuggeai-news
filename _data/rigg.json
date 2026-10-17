@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.6",
+ "gjeldende": "v5.7",
  "versjoner": [
+  {
+   "versjon": "v5.7",
+   "dato": "2026-10-17",
+   "tekst": "En lokal språkmodell vurderer nå om saker som ligner noe vi allerede har publisert, faktisk melder noe nytt, før de tas med i utgaven.",
+   "change": 117,
+   "git": "b4a7149"
+  },
   {
    "versjon": "v5.6",
    "dato": "2026-10-17",
