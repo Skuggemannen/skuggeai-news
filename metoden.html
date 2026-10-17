@@ -45,8 +45,8 @@ hide_sidebar: true
     <div class="stage-rail"><div class="stage-node">03</div><div class="stage-line"></div></div>
     <div class="stage-body">
       <h3 class="stage-name">Fra artikler til hendelser</h3>
-      <p class="stage-desc">Artikler om samme hendelse samles, også på tvers av språk. Hver hendelse sjekkes mot arkivet over alt som er publisert de siste 14 døgnene: rene gjentakelser stoppes, og ny utvikling i en kjent sak merkes som det. Hendelser som ble omtalt tidligere, får en henvisning til de tidligere utgavene.</p>
-      <p class="stage-meta mono"><b>Qwen3 Embedding 8B</b> &middot; gruppering &rarr; arkivsjekk &rarr; ferskhet</p>
+      <p class="stage-desc">Artikler om samme hendelse samles, også på tvers av språk. Hver hendelse sjekkes mot arkivet over alt som er publisert de siste 14 døgnene: en hendelse som bygger på samme kilde eller nesten samme originaltittel som en publisert sak, stoppes. Ligner den bare, avgjør en språkmodell om den faktisk melder noe nytt. Ny utvikling i en kjent sak merkes som det. Hendelser som ble omtalt tidligere, får en henvisning til de tidligere utgavene.</p>
+      <p class="stage-meta mono"><b>Qwen3 Embedding 8B</b> + <b>Mistral Small 3.2</b> &middot; gruppering &rarr; arkivsjekk &rarr; ny informasjon? &rarr; ferskhet</p>
     </div>
   </div>
 
