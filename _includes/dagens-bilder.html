@@ -6,14 +6,14 @@
   {% if bd == db_dag %}{% assign db_bilder = db_bilder | push: b %}{% endif %}
 {% endfor %}
 {% if db_bilder.size > 0 %}
-{% assign db_bilder = db_bilder | sort: "tema" %}
+{% assign db_bilder = db_bilder | sort: "sortering" %}{% assign db_modeller = db_bilder | map: "bildemodell" | compact | uniq %}
 <aside class="dagens-bilder">
-  <p class="db-eyebrow mono">Dagens nyheter illustrert av Qwen Image 2.1</p>
+  <p class="db-eyebrow mono">Dagens nyheter illustrert{% if db_modeller.size > 0 %} av {{ db_modeller | join: " og " }}{% endif %}{% if db_modeller.size > 1 %} · samme prompt{% endif %}</p>
   <div class="db-grid">
   {% for b in db_bilder %}
-    <a class="db-kort" href="{{ '/galleri/' | relative_url }}#{{ db_dag }}-{{ b.tema }}">
+    <a class="db-kort" href="{{ '/galleri/' | relative_url }}#{% if b.anker %}{{ b.anker }}{% else %}{{ db_dag }}-{{ b.tema }}{% endif %}">
       <img src="{{ b.bilde | relative_url }}" alt="{{ b.title | escape }}" loading="lazy" width="1600" height="1600">
-      <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}</span>
+      <span class="tema mono {% if b.tema == 'cybersec' %}tema-sec{% else %}tema-ai{% endif %}">{{ b.tema_navn }}{% if db_modeller.size > 1 %} <span class="modell">&middot; {{ b.bildemodell }}</span>{% endif %}</span>
       <span class="overskrift">{{ b.title }}</span>
     </a>
   {% endfor %}

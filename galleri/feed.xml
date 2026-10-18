@@ -15,7 +15,7 @@ permalink: /galleri/feed.xml
   {% for b in bilder limit: 40 %}
   {% assign anker = b.date | date: '%Y-%m-%d' | append: '-' | append: b.tema %}
   <item>
-    <title>{{ b.tema_navn | xml_escape }} {{ b.date | date: "%d.%m.%Y" }}: {{ b.title | xml_escape }}</title>
+    <title>{{ b.tema_navn | xml_escape }} {{ b.date | date: "%d.%m.%Y" }}: {{ b.title | xml_escape }}{% if b.bildemodell %} ({{ b.bildemodell | xml_escape }}){% endif %}</title>
     <link>{{ '/galleri/' | absolute_url }}#{{ anker }}</link>
     <guid isPermaLink="false">skuggeai-galleri-{{ anker }}</guid>
     <pubDate>{{ b.date | date_to_rfc822 }}</pubDate>
