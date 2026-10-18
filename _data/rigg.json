@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.12",
+ "gjeldende": "v5.13",
  "versjoner": [
+  {
+   "versjon": "v5.13",
+   "dato": "2026-10-18",
+   "tekst": "Nyhetsbildene males nå av to modeller fra samme beskrivelse og vises side om side, og stilbanken er doblet.",
+   "change": 121,
+   "git": "d6f518a"
+  },
   {
    "versjon": "v5.12",
    "dato": "2026-10-18",
