@@ -1,0 +1,16 @@
+---
+date: 2026-10-18
+title: "THE CLOSED GATEWAY"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-18-ai-news-flux3.jpg"
+bytes: 687463
+stil: "Sami duodji-inspired graphic pattern with geometric bands in traditional colours"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-18-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 64862407676560
+saker: [{"motiv": "a heavy, swinging gate with a broken latch", "sak": "Meta fjerner vilkår om skraping"}, {"motiv": "a series of interconnected mechanical gears and levers", "sak": "DeepSeek lanserer Search API"}, {"motiv": "a dense, heavy tapestry of woven grey and orange threads", "sak": "Step 5 Preview med 600 milliarder parametre"}, {"motiv": "a massive, heavy iron barrier blocking a path", "sak": "Selskaper begrenser tilgangen for AI-agenter"}]
+prompt: "The image is an over-the-shoulder view from behind a figure, looking out upon a vast, industrial landscape rendered in the style of Sami duodji-inspired graphic patterns. The foreground shows the dark, textured silhouette of the figure's shoulder and head, framing the scene. In the midground, a heavy, swinging iron gate with a broken, jagged latch stands partially ajar, symbolizing a changing boundary. To the left, a complex, rhythmic arrangement of interconnected steel gears and mechanical levers moves in a precise, synchronized motion. To the right, a massive, dense tapestry made of heavy grey and safety orange threads is being woven into a monumental, multi-layered structure, representing immense scale and complexity. In the background, a towering, impenetrable iron barrier stretches across the horizon, blocking the path of a small, mechanical messenger drone. The entire scene is composed of sharp, geometric bands and traditional patterns characteristic of duodji, but executed in a stark, industrial palette of steel grey, safety orange, and deep black. The lighting is harsh and directional, creating high-contrast shadows and highlighting the metallic textures of the machinery. The bottom third of the frame is a solid, clean black space, providing a clear area for text.\n\nAt the bottom of the frame, a bold headline in lettering that suits the art style reads \"THE CLOSED GATEWAY\", and beneath it smaller letter-spaced text reads \"AI NEWS - 18.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"600B\". No other text, no watermark."
+---
