@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.11",
+ "gjeldende": "v5.12",
  "versjoner": [
+  {
+   "versjon": "v5.12",
+   "dato": "2026-10-18",
+   "tekst": "Energiregnskapet for hver natt lagres nå også for statistikk over tid.",
+   "change": 119,
+   "git": "4a521b9"
+  },
   {
    "versjon": "v5.11",
    "dato": "2026-10-18",
