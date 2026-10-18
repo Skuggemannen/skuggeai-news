@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.14",
+ "gjeldende": "v5.15",
  "versjoner": [
+  {
+   "versjon": "v5.15",
+   "dato": "2026-10-18",
+   "tekst": "Saker med bare én kilde eller usikker dato får nå en ekstra runde med forskningsagenten, som leter etter flere kilder og når saken først ble kjent.",
+   "change": 123,
+   "git": "c6db6c5"
+  },
   {
    "versjon": "v5.14",
    "dato": "2026-10-18",
