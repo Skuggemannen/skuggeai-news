@@ -135,7 +135,7 @@ hide_sidebar: true
   <li><strong>Målt:</strong> energien grafikkortet bruker, lest fra kortets egen energiteller før og etter hvert steg: innhenting med forskningsagenten, gruppering, undersøkelse, skriving, publisering og bilder.</li>
   <li><strong>Anslått (≈):</strong> resten av maskinen (prosessor, hovedkort, disk), grafikkortets tomgang mellom stegene og fram til maskinen går i dvale, og tap i strømforsyningen. Faktorene er dokumentert og byttes ut med målte verdier når det finnes nok data.</li>
   <li><strong>Pris:</strong> spotpris per kvarter pluss nettleiens energiledd per time i prisområde NO1, med avgifter og mva. Fastleddet i nettleien påvirkes ikke av redaksjonen og er ikke med.</li>
-  <li><strong>Klima:</strong> GHG-protokollen, Scope 2, lokasjonsbasert: 9,4 g CO₂e per kWh (NVE, strøm levert i Norge i 2025). Markedsbasert tall kommer.</li>
+  <li><strong>Klima:</strong> GHG-protokollen, Scope 2, lokasjonsbasert: 9,4 g CO₂e per kWh (NVE, klimadeklarasjon for fysisk levert strøm i Norge i 2025). Redaksjonen har ikke kjøpt opprinnelsesgarantier, og følger den lokasjonsbaserte metoden som Energidepartementets veileder (juni 2026) beskriver som konsistent med den fysiske strømmen. En markedsbasert beregning uten garantier ville brukt restmiksen, som gir et langt høyere tall uten at strømmen fysisk er annerledes.</li>
   <li><strong>Ikke med:</strong> serveren som henter nyheter og publiserer, fordi den går døgnet rundt uansett, og den uavhengige nattlige vurderingen, som bruker en skymodell som målestokk.</li>
 </ul>
 {% assign med = site.posts | where_exp: "p", "p.energi_kwh" %}{% if med.size > 0 %}
