@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.10",
+ "gjeldende": "v5.11",
  "versjoner": [
+  {
+   "versjon": "v5.11",
+   "dato": "2026-10-18",
+   "tekst": "Hver utgave viser nå hva natta kostet i strøm, kroner og CO₂e, og metodesiden forklarer hvordan det regnes ut.",
+   "change": 119,
+   "git": "ca01974"
+  },
   {
    "versjon": "v5.10",
    "dato": "2026-10-17",
