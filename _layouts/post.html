@@ -3,4 +3,5 @@ layout: default
 ---
 <article class="dispatch">{{ content }}</article>
 {% if page.rigg %}<p class="rigg-utgave mono">Laget av <a href="{{ '/endringer/' | relative_url }}">rigg {{ page.rigg }}</a></p>{% endif %}
+{% include energi-linje.html p=page %}
 {% include dagens-bilder.html dato=page.date %}

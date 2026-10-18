@@ -128,6 +128,25 @@ hide_sidebar: true
   </div>
 </div>
 
+<p class="sub" id="energi">Energi og klima</p>
+
+<p>Under hver utgave står det hva natta kostet i strøm. Tallene regnes ut automatisk når bildene er ferdige.</p>
+<ul>
+  <li><strong>Målt:</strong> energien grafikkortet bruker, lest fra kortets egen energiteller før og etter hvert steg: innhenting med forskningsagenten, gruppering, undersøkelse, skriving, publisering og bilder.</li>
+  <li><strong>Anslått (≈):</strong> resten av maskinen (prosessor, hovedkort, disk), grafikkortets tomgang mellom stegene og fram til maskinen går i dvale, og tap i strømforsyningen. Faktorene er dokumentert og byttes ut med målte verdier når det finnes nok data.</li>
+  <li><strong>Pris:</strong> spotpris per kvarter pluss nettleiens energiledd per time i prisområde NO1, med avgifter og mva. Fastleddet i nettleien påvirkes ikke av redaksjonen og er ikke med.</li>
+  <li><strong>Klima:</strong> GHG-protokollen, Scope 2, lokasjonsbasert: 9,4 g CO₂e per kWh (NVE, strøm levert i Norge i 2025). Markedsbasert tall kommer.</li>
+  <li><strong>Ikke med:</strong> serveren som henter nyheter og publiserer, fordi den går døgnet rundt uansett, og den uavhengige nattlige vurderingen, som bruker en skymodell som målestokk.</li>
+</ul>
+{% assign med = site.posts | where_exp: "p", "p.energi_kwh" %}{% if med.size > 0 %}
+{% assign maaneder = med | group_by_exp: "p", "p.date | date: '%Y-%m'" %}{% assign tk = 0.0 %}{% assign tkr = 0.0 %}{% assign tc = 0.0 %}
+<table class="energi-tabell mono">
+  <tr><th>Måned</th><th>Utgaver</th><th>kWh</th><th>kr</th><th>g CO₂e</th></tr>
+  {% for m in maaneder %}{% assign k = 0.0 %}{% assign kr = 0.0 %}{% assign c = 0.0 %}{% for p in m.items %}{% assign k = k | plus: p.energi_kwh %}{% if p.energi_kr %}{% assign kr = kr | plus: p.energi_kr %}{% endif %}{% assign c = c | plus: p.energi_co2e_g %}{% endfor %}{% assign tk = tk | plus: k %}{% assign tkr = tkr | plus: kr %}{% assign tc = tc | plus: c %}
+  <tr><td>{{ m.name }}</td><td>{{ m.size }}</td><td>≈ {{ k | round: 2 | replace: '.', ',' }}</td><td>≈ {{ kr | round: 2 | replace: '.', ',' }}</td><td>≈ {{ c | round: 0 }}</td></tr>{% endfor %}
+  <tr class="sum"><td>Totalt</td><td>{{ med.size }}</td><td>≈ {{ tk | round: 2 | replace: '.', ',' }}</td><td>≈ {{ tkr | round: 2 | replace: '.', ',' }}</td><td>≈ {{ tc | round: 0 }}</td></tr>
+</table>{% endif %}
+
 <p class="sub">Tidligere metode</p>
 
 <p>Fram til 16. oktober 2026 ble utgaven skrevet som én samlet rapport per tema, der en språkmodell valgte ut, sammenfattet og skrev alle sakene i samme kall. Den saksvise metoden over ble prøvd ut ved siden av den gamle fra 10. oktober, og utgavene fra utprøvingen ligger i <a href="{{ '/v5/' | relative_url }}">et eget arkiv</a>. En uavhengig vurdering sammenlignet de to metodene hver natt, og den nye ga færre faktafeil og færre dubletter. Fra 17. oktober 2026 lages utgaven med den nye metoden.</p>

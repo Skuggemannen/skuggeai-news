@@ -1,0 +1,1 @@
+{% assign p = include.p %}{% if p.energi_kwh %}<p class="energi-utgave mono">Denne utgaven: ≈ {{ p.energi_kwh | round: 2 | replace: '.', ',' }} kWh{% if p.energi_kr %} · ≈ {{ p.energi_kr | round: 2 | replace: '.', ',' }} kr{% endif %} · ≈ {{ p.energi_co2e_g | round: 0 }} g CO₂e · <a href="{{ '/metoden/' | relative_url }}#energi">Slik regnes det ut</a></p>{% endif %}

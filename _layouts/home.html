@@ -2,6 +2,7 @@
 layout: default
 ---
 {% for post in paginator.posts %}<article class="dispatch">{{ post.content }}</article>
+{% include energi-linje.html p=post %}
 {% include dagens-bilder.html dato=post.date %}
 {% endfor %}
 <nav class="pager">
