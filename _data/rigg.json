@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.13",
+ "gjeldende": "v5.14",
  "versjoner": [
+  {
+   "versjon": "v5.14",
+   "dato": "2026-10-18",
+   "tekst": "Tips fra forskningsagenten kommer nå bare med i utgaven når de er bekreftet av uavhengige kilder.",
+   "change": 122,
+   "git": "d5f044f"
+  },
   {
    "versjon": "v5.13",
    "dato": "2026-10-18",
