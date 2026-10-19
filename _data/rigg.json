@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.16",
+ "gjeldende": "v5.17",
  "versjoner": [
+  {
+   "versjon": "v5.17",
+   "dato": "2026-10-19",
+   "tekst": "Sårbarheter som myndighetene nettopp har meldt som aktivt utnyttet, regnes nå som bekreftet fra primærkilden, og hver sak får med alvorlighetsdata for sårbarhetene den nevner.",
+   "change": 126,
+   "git": "53dc3ee"
+  },
   {
    "versjon": "v5.16",
    "dato": "2026-10-19",
