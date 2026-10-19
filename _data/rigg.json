@@ -1,6 +1,12 @@
 {
- "gjeldende": "v5.17",
+ "gjeldende": "v5.18",
  "versjoner": [
+  {
+   "versjon": "v5.18",
+   "dato": "2026-10-20",
+   "tekst": "Utgaven består nå bare av saker fra nyhetskildene. Funn fra forskningsagenten brukes til å finne flere kilder, men blir ikke egne saker.",
+   "git": "33c6b10"
+  },
   {
    "versjon": "v5.17",
    "dato": "2026-10-19",
