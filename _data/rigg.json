@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.18",
+ "gjeldende": "v5.19",
  "versjoner": [
+  {
+   "versjon": "v5.19",
+   "dato": "2026-10-20",
+   "tekst": "Nyhetskildene leses nå med de nyeste oppslagene først, og travle kilder får med flere artikler per natt.",
+   "change": 128,
+   "git": "4920f52"
+  },
   {
    "versjon": "v5.18",
    "dato": "2026-10-20",
