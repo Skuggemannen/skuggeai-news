@@ -1,0 +1,16 @@
+---
+date: 2026-10-19
+title: "UNCHECKED POWER FRACTURES"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-19-ai-news-flux3.jpg"
+bytes: 512496
+stil: "intricate Japanese kirigami paper sculpture with crisp folds and soft studio light"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-19-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 41810899740985
+saker: [{"motiv": "a recursive, unfolding paper loop", "sak": "Google Research åpner kildekoden for Harness²"}, {"motiv": "a sharp, judge's gavel splitting a paper seal", "sak": "Tyske domstoler holder Google ansvarlig"}, {"motiv": "a dark, looming shadow over a paper silhouette", "sak": "Anthropic advarer om eksistensiell risiko"}, {"motiv": "a severed electrical wire with frayed edges", "sak": "Microsoft trekker seg fra AI-datasenter i Essex"}]
+prompt: "The image is an intricate Japanese kirigami paper sculpture. In the foreground, a complex, recursive loop of paper, folded with extreme precision, spirals inward, representing a self-replicating structure. To the left, a heavy, sharp-edged paper gavel descends, its impact splitting a delicate paper seal in half. In the midground, a thick, severed electrical cable made of black textured paper hangs limp, its ends frayed into tiny, jagged shards. Rising in the background, a massive, dark silhouette of a predatory shape looms over a small, fragile paper landscape, casting a deep shadow. The entire scene is composed of sharp silhouettes and crisp, layered folds. The lighting is a soft studio glow, backlighting the entire sculpture against a bright, glowing horizon. The color palette is striking and toxic, dominated by deep black shadows, vibrant acid green highlights on the paper edges, and moody purple mid-tones. The top third of the frame is a clear, empty space of dark purple gradient, prepared for a headline. The mood is tense, dramatic, and sharp.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"UNCHECKED POWER FRACTURES\", and beneath it smaller letter-spaced text reads \"AI NEWS - 19.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"250K\". No other text, no watermark."
+---
