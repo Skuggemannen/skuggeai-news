@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.15",
+ "gjeldende": "v5.16",
  "versjoner": [
+  {
+   "versjon": "v5.16",
+   "dato": "2026-10-19",
+   "tekst": "Forskningsagentens ekstra runde tar nå først for seg sakene som står i utgaven, før tips som ennå ikke er bekreftet.",
+   "change": 124,
+   "git": "2d88682"
+  },
   {
    "versjon": "v5.15",
    "dato": "2026-10-18",
