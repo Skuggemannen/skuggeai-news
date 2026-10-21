@@ -1,0 +1,16 @@
+---
+date: 2026-10-21
+title: "THE FRACTURED SEAL"
+tema: "cybersec"
+tema_navn: "Cybersikkerhet"
+bilde: "/assets/galleri/2026-10-21-cybersec-flux3.jpg"
+bytes: 557313
+stil: "hand-blown glass sculpture scene with refractions, caustics and coloured highlights"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "cybersec-2"
+anker: "2026-10-21-cybersec-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 272314224084430
+saker: [{"motiv": "shattered glass stamps", "sak": "eMudhra CA-sertifikater kompromittert"}, {"motiv": "a melting glass clock", "sak": "PHP kritiske sårbarheter"}, {"motiv": "a collapsing glass pillar", "sak": "Zeabur stenger etter sikkerhetsbrudd"}, {"motiv": "a heavy glass pendulum with a hidden needle", "sak": "kalenderinvitasjoner brukt til angrep"}]
+prompt: "The image is a dramatic, extreme low-angle worm's-eye view of a collection of hand-blown glass sculptures suspended in a void. In the immediate foreground, several shattered glass stamps, thick and translucent with heavy internal fractures, hang precariously, their edges catching sharp, caustic light. Above them, a large, melting glass clock face distorts the space, its liquid-like structure dripping slow, viscous droplets of clear glass. Further in the background, a massive, monumental glass pillar is visibly collapsing, with large, jagged cracks spreading through its core, creating complex refractions. Floating near the top of the frame, a heavy glass pendulum swings, concealing a tiny, sharp glass needle within its translucent body. The entire scene is rendered in a vintage newspaper palette of off-white, deep black ink, and faded grey, with subtle, sharp highlights of light passing through the glass. The lighting creates intense caustics and prismatic refractions on the surfaces of the sculptures. The bottom third of the frame is a clean, empty off-white expanse, designed for a headline block. The mood is tense and fragile, as if the entire structure is on the verge of total disintegration.\n\nAt the bottom of the frame, a bold headline in lettering that suits the art style reads \"THE FRACTURED SEAL\", and beneath it smaller letter-spaced text reads \"CYBERSECURITY - 21.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"9.2\". No other text, no watermark."
+---
