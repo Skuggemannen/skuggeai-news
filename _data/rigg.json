@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.20",
+ "gjeldende": "v5.21",
  "versjoner": [
+  {
+   "versjon": "v5.21",
+   "dato": "2026-10-21",
+   "tekst": "Nettsøket som brukes til å finne flere kilder til hver sak, virker igjen fullt ut etter en feil i oppsettet.",
+   "change": 131,
+   "git": "d1e28d9"
+  },
   {
    "versjon": "v5.20",
    "dato": "2026-10-21",
