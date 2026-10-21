@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.19",
+ "gjeldende": "v5.20",
  "versjoner": [
+  {
+   "versjon": "v5.20",
+   "dato": "2026-10-21",
+   "tekst": "Kontrollen av om en kilde omtaler samme hendelse godtar nå også oppfølginger, artikler på andre språk og saker om samme utgivelse, så flere saker får uavhengig bekreftelse.",
+   "change": 130,
+   "git": "5c21017"
+  },
   {
    "versjon": "v5.19",
    "dato": "2026-10-20",
