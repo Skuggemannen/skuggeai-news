@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.24",
+ "gjeldende": "v5.25",
  "versjoner": [
+  {
+   "versjon": "v5.25",
+   "dato": "2026-10-22",
+   "tekst": "Kvalitetsvurderingen av en utgave kjøres nå også automatisk når utgaven må lages på nytt.",
+   "change": 144,
+   "git": "3d2f4cf"
+  },
   {
    "versjon": "v5.24",
    "dato": "2026-10-22",
