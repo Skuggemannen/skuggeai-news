@@ -1,6 +1,14 @@
 {
- "gjeldende": "v5.21",
+ "gjeldende": "v5.22",
  "versjoner": [
+  {
+   "versjon": "v5.22",
+   "dato": "2026-10-22",
+   "tekst": "Søket i nyhetsarkivet finner igjen de nyeste artiklene, og en avbrutt natt kan nå tas opp igjen samme morgen.",
+   "detaljer": "Change#135: arkivsok.fts_bygg() kalles i v5/innhenting.py hver natt (FTS-indeksen sto på 9/10). run-v5.sh: energi-pulse arver ikke lenger v5-låsen (9>&-), som hindret gjenopptak 22/10.",
+   "change": 135,
+   "git": "96eb5db"
+  },
   {
    "versjon": "v5.21",
    "dato": "2026-10-21",
