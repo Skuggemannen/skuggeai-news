@@ -1,0 +1,16 @@
+---
+date: 2026-10-22
+title: "THE ARCHITECTED ANTIDOTE"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-22-ai-news-flux3.jpg"
+bytes: 458168
+stil: "Art Deco travel poster with gold leaf accents, streamlined forms and sunburst motifs"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-22-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 81194952854825
+saker: [{"motiv": "a golden, structural protein chain", "sak": "Claude designer proteinbindere mot skorpiongifter"}, {"motiv": "a heavy, steel shipping container", "sak": "Nvidia lanserer AI-datacenter i container"}, {"motiv": "a silver badge with an artificial eye", "sak": "Spotify innførende AI Persona-merking"}]
+prompt: "The image is an Art Deco travel poster with a tight close-up composition. In the center, a majestic, stylized protein strand made of polished gold leaf and slate grey steel links twists elegantly through the frame, forming a complex, architectural structure. The structure is reminiscent of a high-end geometric ornament. To the side, a heavy, industrial shipping container made of matte pine green metal with gold trim sits partially in view, its streamlined edges catching the light. A small, elegant silver badge with a stylized, glowing artificial eye is pinned to the protein structure, symbolizing a digital identity. The background is a minimalist, sunburst pattern of snow white and light grey, radiating from behind the central object. The lighting is dramatic, with sharp highlights on the gold leaf and deep, soft shadows in the pine green sections. The overall mood is sophisticated, clean, and powerful, evoking the precision of modern science and industry. The top third of the frame is a smooth, empty expanse of slate grey, providing clear space for a headline.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"THE ARCHITECTED ANTIDOTE\", and beneath it smaller letter-spaced text reads \"AI NEWS - 22.10.2026\". No other text, no watermark."
+---
