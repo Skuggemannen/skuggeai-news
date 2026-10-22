@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.23",
+ "gjeldende": "v5.24",
  "versjoner": [
+  {
+   "versjon": "v5.24",
+   "dato": "2026-10-22",
+   "tekst": "Illustrasjonene lages nå også automatisk når en utgave må lages på nytt senere på dagen.",
+   "change": 140,
+   "git": "62c116a"
+  },
   {
    "versjon": "v5.23",
    "dato": "2026-10-22",
