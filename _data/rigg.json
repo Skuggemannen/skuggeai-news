@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.27",
+ "gjeldende": "v5.28",
  "versjoner": [
+  {
+   "versjon": "v5.28",
+   "dato": "2026-10-24",
+   "tekst": "Søket etter nyheter om alvorlige sårbarheter prøver nå på nytt når kildedatabasen svarer tregt.",
+   "change": 148,
+   "git": "7c929a8"
+  },
   {
    "versjon": "v5.27",
    "dato": "2026-10-24",
