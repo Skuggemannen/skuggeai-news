@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.29",
+ "gjeldende": "v5.30",
  "versjoner": [
+  {
+   "versjon": "v5.30",
+   "dato": "2026-10-24",
+   "tekst": "Også sakene som ennå ikke er bekreftet av flere kilder, ordnes nå etter viktighet, og bare de tre viktigste tas med per tema.",
+   "change": 152,
+   "git": "f2430b6"
+  },
   {
    "versjon": "v5.29",
    "dato": "2026-10-24",
