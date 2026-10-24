@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.25",
+ "gjeldende": "v5.26",
  "versjoner": [
+  {
+   "versjon": "v5.26",
+   "dato": "2026-10-24",
+   "tekst": "Utgaven har nå inntil 10 bekreftede saker per tema i stedet for 12, etter en måling av hvor viktige de publiserte sakene var. Metodesiden beskriver søket etter nyheter om alvorlige sårbarheter.",
+   "change": 147,
+   "git": "eb23b56"
+  },
   {
    "versjon": "v5.25",
    "dato": "2026-10-22",
