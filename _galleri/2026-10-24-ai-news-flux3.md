@@ -1,0 +1,16 @@
+---
+date: 2026-10-24
+title: "THE SECURE ENCLOSURE"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-24-ai-news-flux3.jpg"
+bytes: 809926
+stil: "embroidered textile panel with satin stitches, French knots and visible thread"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-24-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 128127391115212
+saker: [{"motiv": "A heavy, velvet-lined stone chamber", "sak": "OpenAI har forsterket innkapslingen av trening"}, {"motiv": "A massive, sprawling tapestry of interconnected silk threads", "sak": "Anthropic har utviklet eget versjonskontrollsystem"}, {"motiv": "A heavy, golden scale tipping under a mountain of coins", "sak": "OpenAI Group PBC henter opptil 30 milliarder dollar"}]
+prompt: "The image is an embroidered textile panel with a symmetrical triptych composition, rendered in thick satin stitches, intricate French knots, and visible, textured thread. The color palette is a desert dusk of dusty rose, sand, and lavender. In the left panel, a heavy, stone chamber is depicted, its interior lined with thick, plush velvet in dusty rose, suggesting a secure, windowless enclosure with no external connections. The central panel features a vast, sprawling landscape of interconnected silk threads in sand and lavender, forming a complex, dense web of overlapping lines that represent a massive, organized system of version control. The right panel shows a large, golden scale made of heavy metallic thread, heavily weighted on one side by a massive, overflowing pile of shimmering gold coins and sand-colored beads, illustrating immense financial scale. The entire composition is set against a plain, textured linen background in a pale lavender. The lighting is soft and diffused, as if in twilight, highlighting the raised textures of the embroidery. The bottom third of the frame is a smooth, unadimented expanse of sand-colored fabric, left clear for text.\n\nAt the bottom of the frame, a bold headline in lettering that suits the art style reads \"THE SECURE ENCLOSURE\", and beneath it smaller letter-spaced text reads \"AI NEWS - 24.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"$30B\". No other text, no watermark."
+---

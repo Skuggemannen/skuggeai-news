@@ -1,0 +1,16 @@
+---
+date: 2026-10-24
+title: "THE MASSIVE REVOCATION"
+tema: "cybersec"
+tema_navn: "Cybersikkerhet"
+bilde: "/assets/galleri/2026-10-24-cybersec-flux3.jpg"
+bytes: 411492
+stil: "1970s Kodachrome documentary photograph with warm grain and slightly faded colours"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "cybersec-2"
+anker: "2026-10-24-cybersec-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 210310236650834
+saker: [{"motiv": "a pile of torn, white paper certificates", "sak": "GoDaddy revokerte 404 607 SSL- og TLS-sertifikater"}, {"motiv": "a heavy, metallic sewing needle piercing a soft fabric", "sak": "PHP-sårbarhet krever tiltak"}, {"motiv": "a shattered porcelain bowl filled with spilled grains", "sak": "Sandworm utførte data-sertende angrep mot ukrainsk kornbedrift"}, {"motiv": "a small, leaking vial of dark ink", "sak": "Aokigahara infostealer målretter AI-verktøy"}]
+prompt: "The image is a 1970s Kodachrome documentary photograph with warm grain and slightly faded colours. In the foreground, a large, messy pile of torn, white paper certificates lies scattered across a weathered wooden table, their edges frayed and jagged. Nearby, a heavy, metallic sewing needle is seen piercing through a piece of soft, pale blue fabric, creating tiny, precise punctures. To the left, a shattered porcelain bowl rests on the table, with dried grains spilling out from the cracks onto the dark wood. In the midground, a small, translucent glass vial, slightly tilted, leaks a single drop of thick, dark ink that stains the surface. The background features a vast, empty expanse of soft dawn pink sky, providing significant breathing room. The lighting is the soft, diffused light of early morning, casting long, gentle shadows. The overall composition follows the rule-of-thirds, with the detailed objects concentrated in the lower portion of the frame, leaving the upper third of the image as a clear, unadorned sky of soft blue and pink tones. The mood is nostalgic, quiet, and slightly somber.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"THE MASSIVE REVOCATION\", and beneath it smaller letter-spaced text reads \"CYBERSECURITY - 24.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"404K\". No other text, no watermark."
+---
