@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.28",
+ "gjeldende": "v5.29",
  "versjoner": [
+  {
+   "versjon": "v5.29",
+   "dato": "2026-10-24",
+   "tekst": "Nye kilder: finske og danske myndigheters sikkerhetsvarsler, finsk allmennkringkasting og flere redaksjoner som dekker næringsliv og teknologi.",
+   "change": 151,
+   "git": "05d9325"
+  },
   {
    "versjon": "v5.28",
    "dato": "2026-10-24",
