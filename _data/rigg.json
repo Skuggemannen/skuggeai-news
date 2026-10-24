@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.26",
+ "gjeldende": "v5.27",
  "versjoner": [
+  {
+   "versjon": "v5.27",
+   "dato": "2026-10-24",
+   "tekst": "Sakene i hvert tema ordnes nå etter viktighet av en lokal språkmodell som ser hele nattens liste samtidig, før de ti viktigste velges ut.",
+   "change": 149,
+   "git": "1031952"
+  },
   {
    "versjon": "v5.26",
    "dato": "2026-10-24",
