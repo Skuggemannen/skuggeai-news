@@ -1,6 +1,14 @@
 {
- "gjeldende": "v5.32",
+ "gjeldende": "v5.33",
  "versjoner": [
+  {
+   "versjon": "v5.33",
+   "dato": "2026-10-25",
+   "tekst": "Nattløypa bruker ikke lenger det brede nyhetssøket som ikke bidro til utgaven, og en sak blir ikke lenger regnet som bekreftet når søket viser at den er flere dager gammel.",
+   "detaljer": "Change#155 (#130): innhenting uten bredt LDR-dypdykk; sperre i LDR per sak mot oppgradering av saker med uverifisert dato ≥ 3 døgn.",
+   "change": 155,
+   "git": "c615a67"
+  },
   {
    "versjon": "v5.32",
    "dato": "2026-10-25",
