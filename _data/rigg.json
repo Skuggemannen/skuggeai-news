@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.35",
+ "gjeldende": "v5.36",
  "versjoner": [
+  {
+   "versjon": "v5.36",
+   "dato": "2026-10-25",
+   "tekst": "Metodesiden beskriver nå hvilke sider fra aktøren selv og hvilke forskningsartikler som kan bekrefte en sak, og hvordan forskningsresultater omtales.",
+   "change": 156,
+   "git": "7d945e2"
+  },
   {
    "versjon": "v5.35",
    "dato": "2026-10-25",
