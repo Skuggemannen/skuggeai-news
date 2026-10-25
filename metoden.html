@@ -36,32 +36,23 @@ hide_sidebar: true
   <div class="stage">
     <div class="stage-rail"><div class="stage-node">02</div><div class="stage-line"></div></div>
     <div class="stage-body">
-      <h3 class="stage-name">Dypdykk</h3>
-      <p class="stage-desc">GPU-serveren vekkes, og en egen modell gjør sitt eget iterative søk — leser, følger opp tråder, søker videre — utover det RSS-kildene fanger opp. Funnene brukes som tips om saker som bør undersøkes, men teller aldri selv som kilde.</p>
-      <p class="stage-meta mono"><b>Qwen3.8 27B</b> &middot; LDR &middot; tips, ikke kilde</p>
+      <h3 class="stage-name">Fra artikler til hendelser</h3>
+      <p class="stage-desc">Artikler om samme hendelse samles, også på tvers av språk. Hver hendelse sjekkes mot arkivet over alt som er publisert de siste 14 døgnene: en hendelse som bygger på samme kilde eller nesten samme originaltittel som en publisert sak, stoppes. Ligner den bare, avgjør en språkmodell om den faktisk melder noe nytt. Gjelder sakene sårbarheter med ulike CVE-numre, avgjør programkode at det er en ny hendelse. Ny utvikling i en kjent sak merkes som det. Hendelser som ble omtalt tidligere, får en henvisning til de tidligere utgavene.</p>
+      <p class="stage-meta mono"><b>Qwen3 Embedding 8B</b> + <b>Mistral Small 3.2</b> &middot; gruppering &rarr; arkivsjekk &rarr; ny informasjon? &rarr; ferskhet</p>
     </div>
   </div>
 
   <div class="stage">
     <div class="stage-rail"><div class="stage-node">03</div><div class="stage-line"></div></div>
     <div class="stage-body">
-      <h3 class="stage-name">Fra artikler til hendelser</h3>
-      <p class="stage-desc">Artikler om samme hendelse samles, også på tvers av språk. Hver hendelse sjekkes mot arkivet over alt som er publisert de siste 14 døgnene: en hendelse som bygger på samme kilde eller nesten samme originaltittel som en publisert sak, stoppes. Ligner den bare, avgjør en språkmodell om den faktisk melder noe nytt. Ny utvikling i en kjent sak merkes som det. Hendelser som ble omtalt tidligere, får en henvisning til de tidligere utgavene.</p>
-      <p class="stage-meta mono"><b>Qwen3 Embedding 8B</b> + <b>Mistral Small 3.2</b> &middot; gruppering &rarr; arkivsjekk &rarr; ny informasjon? &rarr; ferskhet</p>
-    </div>
-  </div>
-
-  <div class="stage">
-    <div class="stage-rail"><div class="stage-node">04</div><div class="stage-line"></div></div>
-    <div class="stage-body">
       <h3 class="stage-name">Undersøkelse av hver sak</h3>
-      <p class="stage-desc">Hver hendelse vurderes først for relevans. De relevante undersøkes én og én: kildene leses i sin helhet, det søkes etter flere uavhengige kilder og etter aktørens egen kunngjøring, og resultatet er et faktaark der hver påstand har et ordrett sitat fra kilden. Programkode, ikke språkmodellen, kontrollerer at sitatet faktisk står på siden. Uavhengighet telles per eier: ti nettsteder som gjengir samme pressemelding, er én kilde. En sak regnes som bekreftet når minst to uavhengige kilder eller aktøren selv står bak den. Sårbarheter som saken nevner, slås opp i den amerikanske sikkerhetsmyndigheten CISAs katalog over aktivt utnyttede sårbarheter (KEV) og i EPSS, som anslår sannsynligheten for at en sårbarhet blir utnyttet. Er en sårbarhet nettopp lagt inn i KEV, er det CISA selv som melder at den utnyttes, og saken regnes som bekreftet fra primærkilden. Eldre oppføringer bekrefter ingenting om en ny hendelse. Saker som bare har én kilde, eller der det er tvil om hvor ferske de er, får en ekstra runde: forskningsagenten søker etter når saken først ble kjent og etter flere kilder. Det den finner, kontrolleres på samme måte – den teller aldri som kilde selv – og en sak som viser seg å være meldt første gang for mer enn 36 timer siden, tas ut.</p>
+      <p class="stage-desc">Hver hendelse vurderes først for relevans. De relevante undersøkes én og én: kildene leses i sin helhet, det søkes etter flere uavhengige kilder og etter aktørens egen kunngjøring, og resultatet er et faktaark der hver påstand har et ordrett sitat fra kilden. Programkode, ikke språkmodellen, kontrollerer at sitatet faktisk står på siden. Uavhengighet telles per eier: ti nettsteder som gjengir samme pressemelding, er én kilde. En sak regnes som bekreftet når minst to uavhengige kilder eller aktøren selv står bak den. Sårbarheter som saken nevner, slås opp i den amerikanske sikkerhetsmyndigheten CISAs katalog over aktivt utnyttede sårbarheter (KEV) og i EPSS, som anslår sannsynligheten for at en sårbarhet blir utnyttet. Er en sårbarhet lagt inn i KEV de siste to døgnene, er det CISA selv som melder at den utnyttes, og saken regnes som bekreftet fra primærkilden. Eldre oppføringer bekrefter ingenting om en ny hendelse. Saker som bare har én kilde, eller der det er tvil om hvor ferske de er, får en ekstra runde: forskningsagenten søker etter når saken først ble kjent og etter flere kilder. Det den finner, kontrolleres på samme måte – den teller aldri som kilde selv – og en sak som viser seg å være meldt første gang for mer enn 36 timer siden, tas ut. Kan tidspunktet ikke bekreftes på kildesiden, men agenten oppgir at saken er minst tre døgn gammel, får saken ingen nye kilder fra denne runden.</p>
       <p class="stage-meta mono"><b>Qwen3 30B</b> + <b>Qwen3.8 27B</b> (forskningsagent) &middot; relevans &rarr; kilder &rarr; faktaark med kontrollerte sitater &rarr; sårbarhetsdata &rarr; ekstra runde for ubekreftede</p>
     </div>
   </div>
 
   <div class="stage">
-    <div class="stage-rail"><div class="stage-node">05</div><div class="stage-line"></div></div>
+    <div class="stage-rail"><div class="stage-node">04</div><div class="stage-line"></div></div>
     <div class="stage-body">
       <h3 class="stage-name">Skriving, én sak om gangen</h3>
       <p class="stage-desc">Hver sak skrives for seg på norsk, bare fra de kontrollerte påstandene og sitatene. Når et selskap uttaler seg om seg selv, står det «ifølge». Programkode sjekker at hvert tall i teksten finnes i kildematerialet. Gjør det ikke det, skrives saken på nytt, og går det fortsatt ikke, brukes påstandene direkte. Tall, årstall og navn sammenlignes i tillegg med den ordrette kildeteksten, og avvik registreres.</p>
@@ -70,7 +61,7 @@ hide_sidebar: true
   </div>
 
   <div class="stage">
-    <div class="stage-rail"><div class="stage-node">06</div><div class="stage-line"></div></div>
+    <div class="stage-rail"><div class="stage-node">05</div><div class="stage-line"></div></div>
     <div class="stage-body">
       <h3 class="stage-name">Publisering</h3>
       <p class="stage-desc">Utgaven settes sammen av programkode, ikke av en språkmodell: bekreftede saker først, med lenker til kildene, antall uavhengige kilder, primærkilde og tidligere omtale. Saker med bare én kilde står samlet under «Ubekreftet». Det som ble publisert, blir redaksjonens hukommelse for de neste nettene.</p>
@@ -79,7 +70,7 @@ hide_sidebar: true
   </div>
 
   <div class="stage">
-    <div class="stage-rail"><div class="stage-node">07</div><div class="stage-line"></div></div>
+    <div class="stage-rail"><div class="stage-node">06</div><div class="stage-line"></div></div>
     <div class="stage-body">
       <h3 class="stage-name">Dagens bilder</h3>
       <p class="stage-desc">Når utgaven er ute, lager redaksjonen et KI-kunstverk per tema ut fra siste døgns nyheter — også dette helt lokalt. En språkmodell leser bare de <em>bekreftede</em> sakene og skriver bildebeskrivelsen: hvilke saker som skal bli motiver, og i hvilken stil og komposisjon. Stilen trekkes fra en bank på 70 stiler, 24 komposisjoner og 24 paletter, og det som er brukt nylig, settes i karantene, så bildene blir ulike fra natt til natt. Deretter maler to bildemodeller hvert sitt bilde fra nøyaktig samme beskrivelse, etter hverandre på GPU-serveren, og bildene vises side om side: en sammenligning av hvordan to modeller tolker det samme oppdraget. Hvert motiv er knyttet til saken det bygger på, og vises som «Saker i bildet» i <a href="{{ '/galleri/' | relative_url }}">galleriet</a>, som også har egen RSS-strøm.</p>
@@ -133,7 +124,7 @@ hide_sidebar: true
 
 <p>Under hver utgave står det hva natta kostet i strøm. Tallene regnes ut automatisk når bildene er ferdige.</p>
 <ul>
-  <li><strong>Målt:</strong> energien grafikkortet bruker, lest fra kortets egen energiteller før og etter hvert steg: innhenting med forskningsagenten, gruppering, undersøkelse, skriving, publisering og bilder.</li>
+  <li><strong>Målt:</strong> energien grafikkortet bruker, lest fra kortets egen energiteller før og etter hvert steg: innhenting, gruppering, undersøkelse, skriving, publisering og bilder.</li>
   <li><strong>Anslått (≈):</strong> resten av maskinen (prosessor, hovedkort, disk), grafikkortets tomgang mellom stegene og fram til maskinen går i dvale, og tap i strømforsyningen. Faktorene er dokumentert og byttes ut med målte verdier når det finnes nok data.</li>
   <li><strong>Pris:</strong> spotpris per kvarter pluss nettleiens energiledd per time i prisområde NO1, med avgifter og mva. Fastleddet i nettleien påvirkes ikke av redaksjonen og er ikke med.</li>
   <li><strong>Klima:</strong> GHG-protokollen, Scope 2, lokasjonsbasert: 9,4 g CO₂e per kWh (NVE, klimadeklarasjon for fysisk levert strøm i Norge i 2025). Redaksjonen har ikke kjøpt opprinnelsesgarantier, og følger den lokasjonsbaserte metoden som Energidepartementets veileder (juni 2026) beskriver som konsistent med den fysiske strømmen. En markedsbasert beregning uten garantier ville brukt restmiksen, som gir et langt høyere tall uten at strømmen fysisk er annerledes.</li>
