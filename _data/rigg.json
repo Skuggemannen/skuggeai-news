@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.31",
+ "gjeldende": "v5.32",
  "versjoner": [
+  {
+   "versjon": "v5.32",
+   "dato": "2026-10-25",
+   "tekst": "Nye sårbarhetsvarsler blir ikke lenger forvekslet med tidligere varsler om andre sårbarheter, og myndighetenes liste over aktivt utnyttede sårbarheter brukes som kilde også dagen etter at artiklene kommer.",
+   "change": 154,
+   "git": "4b47c6a"
+  },
   {
    "versjon": "v5.31",
    "dato": "2026-10-25",
