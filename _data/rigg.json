@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.34",
+ "gjeldende": "v5.35",
  "versjoner": [
+  {
+   "versjon": "v5.35",
+   "dato": "2026-10-25",
+   "tekst": "En forskningsartikkel fra forskergruppen selv kan nå bekrefte en sak, og forskningsresultater skrives som det en bestemt forskergruppe oppgir, ikke som fakta eller som noe «forskerne» mener.",
+   "change": 156,
+   "git": "b709099"
+  },
   {
    "versjon": "v5.34",
    "dato": "2026-10-25",
