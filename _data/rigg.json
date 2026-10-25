@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.33",
+ "gjeldende": "v5.34",
  "versjoner": [
+  {
+   "versjon": "v5.34",
+   "dato": "2026-10-25",
+   "tekst": "En side fra aktøren selv bekrefter nå en sak bare når den er aktørens egen kunngjøring om nettopp den saken, ikke en annen kunngjøring eller en oversiktsside. Den nattlige kvalitetsvurderingen skiller nå mellom saker den ikke fikk sjekket og saker der kildene ikke holder.",
+   "change": 156,
+   "git": "d8b1e24"
+  },
   {
    "versjon": "v5.33",
    "dato": "2026-10-25",
