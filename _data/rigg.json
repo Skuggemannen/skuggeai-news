@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.30",
+ "gjeldende": "v5.31",
  "versjoner": [
+  {
+   "versjon": "v5.31",
+   "dato": "2026-10-25",
+   "tekst": "Flere saker kommer nå gjennom relevansvurderingen fordi lange modellsvar ikke lenger blir avkortet.",
+   "change": 153,
+   "git": "5a626c3"
+  },
   {
    "versjon": "v5.30",
    "dato": "2026-10-24",
