@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.40",
+ "gjeldende": "v5.41",
  "versjoner": [
+  {
+   "versjon": "v5.41",
+   "dato": "2026-10-26",
+   "tekst": "Ukeutgaven bygges nå fra alle artiklene uka hadde, ikke bare fra dagsutgavene, og har fått «Uka i tall».",
+   "change": 158,
+   "git": "7c76d2f"
+  },
   {
    "versjon": "v5.40",
    "dato": "2026-10-26",
