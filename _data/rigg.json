@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.38",
+ "gjeldende": "v5.39",
  "versjoner": [
+  {
+   "versjon": "v5.39",
+   "dato": "2026-10-26",
+   "tekst": "Ukeutgaven samler ikke lenger ulike kunngjøringer til én sak, er kortere og viser hvor mange nettsteder og dager hver sak ble omtalt.",
+   "change": 158,
+   "git": "8f6a919"
+  },
   {
    "versjon": "v5.38",
    "dato": "2026-10-26",
