@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.39",
+ "gjeldende": "v5.40",
  "versjoner": [
+  {
+   "versjon": "v5.40",
+   "dato": "2026-10-26",
+   "tekst": "Ukeutgaven finner nå oftere det siste som er skrevet om hver sak.",
+   "change": 158,
+   "git": "877e843"
+  },
   {
    "versjon": "v5.39",
    "dato": "2026-10-26",
