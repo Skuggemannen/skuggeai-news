@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.37",
+ "gjeldende": "v5.38",
  "versjoner": [
+  {
+   "versjon": "v5.38",
+   "dato": "2026-10-26",
+   "tekst": "Ny ukeutgave under «Uka»: hver mandag de ti største sakene i hvert tema fra uka som gikk, med utvikling, status og trend.",
+   "change": 158,
+   "git": "88d7011"
+  },
   {
    "versjon": "v5.37",
    "dato": "2026-10-26",
