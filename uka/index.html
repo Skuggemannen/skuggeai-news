@@ -1,0 +1,18 @@
+---
+layout: default
+title: Uka som gikk
+permalink: /uka/
+hide_sidebar: true
+---
+<h1 class="page-title">Uka som gikk</h1>
+<p class="arkiv-meta">Hver mandag: de ti største sakene i hvert tema fra uka mandag–søndag, med hvordan de utviklet seg og hvor de står nå, og en kort trend mot uka før. «Størst» betyr omtalt av flest ulike nettsteder gjennom uka – talt av programkode, ikke vurdert av en språkmodell. Se <a href="{{ '/metoden/' | relative_url }}#uka">Metoden</a>.</p>
+{% assign uker = site.uka | sort: "date" | reverse %}
+{% if uker.size > 0 %}
+{% assign siste = uker | first %}
+<p><a class="se-arkiv" href="{{ siste.url | relative_url }}">Siste utgave: {{ siste.title }} &rarr;</a></p>
+{% endif %}
+<ul class="v5-liste">
+{% for u in uker %}
+  <li><a href="{{ u.url | relative_url }}">{{ u.title }}</a>{% if u.teaser %} <small>– {{ u.teaser | truncate: 140 }}</small>{% endif %}</li>
+{% endfor %}
+</ul>

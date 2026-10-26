@@ -120,6 +120,18 @@ hide_sidebar: true
   </div>
 </div>
 
+<p class="sub" id="uka">Ukeutgaven</p>
+
+<p>Hver mandag lages en egen utgave med uka som gikk (mandag–søndag), under <a href="{{ '/uka/' | relative_url }}">Uka</a>. Den bygger på det de daglige utgavene allerede har samlet inn og kontrollert. Det hentes ikke inn noe nytt, bortsett fra et søk etter hvor sakene står nå.</p>
+<ul>
+  <li><strong>Én sak gjennom uka:</strong> en hendelse som går over flere dager, for eksempel en sårbarhet som varsles, rettes og så utnyttes, samles til én sak. Programkode kobler artiklene på felles lenker, felles CVE-nummer og hvor like tekstene er, med ekstra vekt på navn som plutselig dukker opp i nyhetene den uka.</li>
+  <li><strong>Hva var størst:</strong> sakene rangeres etter hvor mange ulike nettsteder som skrev om dem gjennom uka, deretter hvor mange dager de var i nyhetene og om de ble bekreftet. Rangeringen gjøres av programkode, ikke av en språkmodell. De ti største i hvert tema kommer med.</li>
+  <li><strong>Status nå:</strong> for hver sak søkes det etter det siste som er skrevet. Nye sider teller bare hvis de består de samme kontrollene som i dagsutgaven: kjent kilde eller aktørens egen kanal, samme hendelse og ordrett sitat.</li>
+  <li><strong>Teksten:</strong> skrives av en lokal språkmodell bare fra tidslinjen og de kontrollerte påstandene. Tall som ikke finnes i kildene, gir ny skriving.</li>
+  <li><strong>Trend:</strong> antall saker, mest omtalte aktører og (for cybersikkerhet) CVE-er og aktivt utnyttede sårbarheter, sammenlignet med uka før. Talt av programkode.</li>
+</ul>
+<p>Kjent svakhet: i en uke der ett selskap har mange kunngjøringer, kan flere av dem bli samlet til én sak.</p>
+
 <p class="sub" id="energi">Energi og klima</p>
 
 <p>Under hver utgave står det hva natta kostet i strøm. Tallene regnes ut automatisk når bildene er ferdige.</p>

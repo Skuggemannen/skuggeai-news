@@ -579,6 +579,7 @@
     </div>
     <nav class="mast-nav mono">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="on"{% endif %}>Forsiden</a>
+      <a href="{{ '/uka/' | relative_url }}"{% if page.url contains '/uka/' %} class="on"{% endif %}>Uka</a>
       <a href="{{ '/arkiv/' | relative_url }}"{% if page.url == '/arkiv/' %} class="on"{% endif %}>Arkiv</a>
       <a href="{{ '/galleri/' | relative_url }}"{% if page.url == '/galleri/' %} class="on"{% endif %}>Galleri</a>
       <a href="{{ '/trusselbilde/' | relative_url }}"{% if page.url contains '/trusselbilde/' %} class="on"{% endif %}>Trusselbilde</a>
