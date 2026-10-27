@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.41",
+ "gjeldende": "v5.42",
  "versjoner": [
+  {
+   "versjon": "v5.42",
+   "dato": "2026-10-27",
+   "tekst": "Strømregnskapet regner nå bare tiden maskinen faktisk er våken",
+   "change": 160,
+   "git": "0ba516c"
+  },
   {
    "versjon": "v5.41",
    "dato": "2026-10-26",
