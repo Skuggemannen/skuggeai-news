@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.42",
+ "gjeldende": "v5.43",
  "versjoner": [
+  {
+   "versjon": "v5.43",
+   "dato": "2026-10-27",
+   "tekst": "Ny ukentlig måling: riggens utvalg innen cybersikkerhet sammenlignes med et eksternt nyhetsbrev – hva begge fanget, hva riggen manglet og hva riggen hadde alene.",
+   "change": 164,
+   "git": "aa7b152"
+  },
   {
    "versjon": "v5.42",
    "dato": "2026-10-27",
