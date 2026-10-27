@@ -1,0 +1,16 @@
+---
+date: 2026-10-27
+title: "THE BREACH IN THE CODE"
+tema: "cybersec"
+tema_navn: "Cybersikkerhet"
+bilde: "/assets/galleri/2026-10-27-cybersec-flux3.jpg"
+bytes: 733039
+stil: "hand-drawn European ligne claire comic panel in the tradition of Franco-Belgian bande dessinee"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "cybersec-2"
+anker: "2026-10-27-cybersec-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 151524849832511
+saker: [{"motiv": "a compressed, bursting silver canister", "sak": "Microsoft .NET Brotli-sårbarhet"}, {"motiv": "a tangled web of silver fishing lines", "sak": "PHP2Shell-sårbarheter utnyttet av Lazarus"}, {"motiv": "a swarm of tiny silver worms", "sak": "Miasma-wormen i Microsoft-repositorier"}, {"motiv": "a heavy, broken silver padlock", "sak": "Uautorisert tilgang hos Genesys"}]
+prompt: "The image is a hand-drawn European ligne claire comic panel in the tradition of Franco-Belgian bande dessinee. The composition follows a strong diagonal from the lower left to the upper right, leaving a clear, empty space at the top for a headline. The color palette is strictly limited to icy cyan, silver, and pale blue. In the lower left foreground, a pressurized, metallic silver canister is shown mid-explosion, with tiny shards of compressed silver material bursting outward like a pressurized leak. Moving diagonally towards the center, a complex web of thin, translucent silver fishing lines is tangled around several small, crystalline spheres, representing intercepted data. In the middle ground, a swarm of tiny, segmented silver worms crawls through a series of interconnected silver pipes and mechanical gears, symbolizing an invading worm. In the upper right background, a heavy, broken silver padlock hangs limp from a cold, cyan-colored structural beam. The entire scene is rendered with clean, precise black outlines, flat colors, and no gradients, creating a crisp, clinical, and cold atmosphere. The lighting is even and shadowless, typical of the clear line style, with a sense of sterile, frozen tension.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"THE BREACH IN THE CODE\", and beneath it smaller letter-spaced text reads \"CYBERSECURITY - 27.10.2026\". No other text, no watermark."
+---
