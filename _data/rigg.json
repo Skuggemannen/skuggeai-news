@@ -1,6 +1,14 @@
 {
- "gjeldende": "v5.45",
+ "gjeldende": "v5.46",
  "versjoner": [
+  {
+   "versjon": "v5.46",
+   "dato": "2026-10-28",
+   "tekst": "Den ukentlige sammenligningen med et eksternt nyhetsbrev tar nå med eldre utgaver, regner ikke lenger nyhetsbrevets egne innlegg som manglende kilder, og viser dekningen først i tabellen.",
+   "detaljer": "Ticket#169: tre forbedringer av referansesjekken (12eccc5, f62a901, fff3ed6).",
+   "change": 164,
+   "git": "fff3ed6"
+  },
   {
    "versjon": "v5.45",
    "dato": "2026-10-28",
