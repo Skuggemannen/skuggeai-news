@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.44",
+ "gjeldende": "v5.45",
  "versjoner": [
+  {
+   "versjon": "v5.45",
+   "dato": "2026-10-28",
+   "tekst": "Samme nyhet omtalt fra hver sin part – for eksempel at et selskap investerer i et annet – blir nå gjenkjent som én sak, så den ikke står to ganger i utgaven.",
+   "change": 166,
+   "git": "e67ca03"
+  },
   {
    "versjon": "v5.44",
    "dato": "2026-10-28",
