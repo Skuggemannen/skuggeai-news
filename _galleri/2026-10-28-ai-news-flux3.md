@@ -1,0 +1,16 @@
+---
+date: 2026-10-28
+title: "THE UNRAVELING LOGIC"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-28-ai-news-flux3.jpg"
+bytes: 380545
+stil: "vaporwave collage with classical busts, checkerboard floors and pastel gradients"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-28-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 86324041480928
+saker: [{"motiv": "a fractured classical marble bust", "sak": "UK Home Office kan bli etterforsket for bruk av ChatGPT"}, {"motiv": "a heavy, swirling pool of liquid mercury", "sak": "Liquid AI har lansert LFM3"}, {"motiv": "a dense, complex geometric knot of black wire", "sak": "OpenAI hevder å ha løst åpne spørsmål innen matematikk"}, {"motiv": "a massive, solid black stone slab", "sak": "Anthropic har sendt inn S-1 for børsnotering"}]
+prompt: "The image is a vaporwave collage set against a bright, backlit horizon where a stark white sun creates a glowing silhouette effect. In the foreground, a large, fractured classical marble bust of a Greek deity stands off-center, its face cracked with deep fissures. In the midground, a dense, complex geometric knot of thick black wire floats precariously, representing a mathematical puzzle. To the right, a heavy, swirling pool of liquid mercury rests on a black and white checkerboard floor, its surface reflecting the high-contrast light. In the background, a massive, solid black stone slab rises like a monolith against the white horizon. The entire composition is rendered in monochrome black and white, creating a sharp, high-contrast look, with the only exception being a single, striking accent of signal red: a thin, vibrant red thread snagged in the cracks of the marble bust. The top third of the frame is a clear, empty white space for text. The lighting is dramatic, casting long, dark shadows across the checkered floor, creating a surreal and melancholic atmosphere.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"THE UNRAVELING LOGIC\", and beneath it smaller letter-spaced text reads \"AI NEWS - 28.10.2026\". No other text, no watermark."
+---
