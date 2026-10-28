@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.43",
+ "gjeldende": "v5.44",
  "versjoner": [
+  {
+   "versjon": "v5.44",
+   "dato": "2026-10-28",
+   "tekst": "Den ukentlige sammenligningen med et eksternt nyhetsbrev viser nå også hvilke kilder riggen mangler, og bruker mindre regnekraft.",
+   "change": 164,
+   "git": "5295e02"
+  },
   {
    "versjon": "v5.43",
    "dato": "2026-10-27",
