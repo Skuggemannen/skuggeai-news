@@ -1,6 +1,13 @@
 {
- "gjeldende": "v5.46",
+ "gjeldende": "v5.47",
  "versjoner": [
+  {
+   "versjon": "v5.47",
+   "dato": "2026-10-28",
+   "tekst": "Ni nye kilder innen cybersikkerhet (myndigheter og trusselforskning) og flere kilder som teller som bekreftelse.",
+   "change": 168,
+   "git": "82a1ed4"
+  },
   {
    "versjon": "v5.46",
    "dato": "2026-10-28",
