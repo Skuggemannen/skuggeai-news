@@ -1,6 +1,14 @@
 {
- "gjeldende": "v5.47",
+ "gjeldende": "v5.48",
  "versjoner": [
+  {
+   "versjon": "v5.48",
+   "dato": "2026-10-29",
+   "tekst": "Samme sårbarhet omtalt fra to sider – for eksempel angrepet og den som ble rammet – blir nå gjenkjent som én sak, så den ikke står to ganger i utgaven.",
+   "detaljer": "Ticket#163: felles CVE gir kandidat i sammenslåingen ved høy likhet.",
+   "change": 169,
+   "git": "9002594"
+  },
   {
    "versjon": "v5.47",
    "dato": "2026-10-28",
