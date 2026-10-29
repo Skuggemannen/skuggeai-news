@@ -1,0 +1,16 @@
+---
+date: 2026-10-29
+title: "AUTONOMY IN THE FOREST"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-29-ai-news-flux3.jpg"
+bytes: 431313
+stil: "16-bit pixel art scene with limited palette and crisp dithering"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-29-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 197923679871948
+saker: [{"motiv": "a heavy, dark carbon coal cluster", "sak": "Gemini 4 Carbon lanseres"}, {"motiv": "a miniature 3D diorama of a mossy clearing", "sak": "Google lanserer Genie 4"}, {"motiv": "a stream of golden autumn leaves", "sak": "OpenAI genererte 10 milliarder dollar for Microsoft"}, {"motiv": "a small, self-contained wooden clockwork gear", "sak": "Opera ruller ut lokale AI-modeller"}]
+prompt: "The image is a 16-bit pixel art scene with a limited palette of rust red, mustard, and deep brown, featuring crisp dithering. The composition is minimalist, with a single small subject centered in a vast, empty negative space. In the middle ground, a heavy, dark cluster of jagged carbon coal sits upon a patch of dry, mustard-colored moss. Next to the coal, a tiny, detailed 3D diorama of a miniature forest clearing is contained within a small, translucent glass sphere, showing miniature trees and a tiny patch of rust-red ground. A single, thick stream of golden autumn leaves falls vertically from the top of the frame, passing behind the glass sphere but in front of the dark background. The background is a deep, solid brown void, providing immense negative space at the top of the frame. The lighting is dim and atmospheric, as if in a dense autumn woodland at dusk, with soft shadows and no direct light source. The entire scene has a nostalgic, lo-fi aesthetic with sharp, blocky edges and intentional dithering for gradients.\n\nAt the top of the frame, a bold headline in lettering that suits the art style reads \"AUTONOMY IN THE FOREST\", and beneath it smaller letter-spaced text reads \"AI NEWS - 29.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"10B\". No other text, no watermark."
+---
