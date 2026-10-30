@@ -1,0 +1,16 @@
+---
+date: 2026-10-30
+title: "THE UNRAVELING OF CERTAINTY"
+tema: "ai-news"
+tema_navn: "AI-nyheter"
+bilde: "/assets/galleri/2026-10-30-ai-news-flux3.jpg"
+bytes: 684832
+stil: "medieval illuminated manuscript page with gold borders and marginalia creatures"
+bildemodell: "FLUX.3 Image Klein"
+sortering: "ai-news-2"
+anker: "2026-10-30-ai-news-flux3"
+promptmodell: "Gemma 4 26B"
+seed: 130020410574477
+saker: [{"motiv": "a spilled jar of names", "sak": "Lekkasje eksponerer over 41 000 ansatte i USAs sikkerhetsdepartement"}, {"motiv": "a massive pile of heavy golden weights", "sak": "Mistral har sluppet vektene for AI-modellen Mistral Large 4"}, {"motiv": "a flipping silver coin", "sak": "Anthropic-studie viser at eksperter adopterer AI-agenters tilfeldige synspunkter"}, {"motiv": "a heavy golden seal being rewritten", "sak": "OpenAI har oppdatert Model Spec for AI-modeller"}]
+prompt: "The image is a medieval illuminated manuscript page, featuring a tight close-up on a central, ornate ceramic jar that has tipped over. From the mouth of the jar, a torrent of small, delicate parchment scraps spills across a dark navy surface; each scrap bears a tiny, illegible ink smudge representing a person's name. Beside the jar lies a massive, heavy pile of solid gold weights, polished and gleaming with a deep crimson luster, symbolizing immense computational scale. In the foreground, a single, large silver coin is captured mid-tumble, spinning on its edge, reflecting an electric teal light. The background is a rich, deep navy parchment texture, decorated with intricate gold leaf borders and marginalia creatures—small, whimsical dragons and winged serpents woven into the corners. The lighting is dramatic, reminiscent of candlelight, casting long, soft shadows and highlighting the metallic textures of the gold and the shimmer of the silver. The bottom third of the frame is a clean, dark navy void, intentionally left empty for text. The overall mood is one of profound upheaval and the loss of structured order.\n\nAt the bottom of the frame, a bold headline in lettering that suits the art style reads \"THE UNRAVELING OF CERTAINTY\", and beneath it smaller letter-spaced text reads \"AI NEWS - 30.10.2026\". Integrated into the scene, a single large, clearly legible tag shows \"41K\". No other text, no watermark."
+---
