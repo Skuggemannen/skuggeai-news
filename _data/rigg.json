@@ -5,7 +5,6 @@
    "versjon": "v5.48",
    "dato": "2026-10-29",
    "tekst": "Samme sårbarhet omtalt fra to sider – for eksempel angrepet og den som ble rammet – blir nå gjenkjent som én sak, så den ikke står to ganger i utgaven.",
-   "detaljer": "Ticket#163: felles CVE gir kandidat i sammenslåingen ved høy likhet.",
    "change": 169,
    "git": "9002594"
   },
@@ -20,7 +19,6 @@
    "versjon": "v5.46",
    "dato": "2026-10-28",
    "tekst": "Den ukentlige sammenligningen med et eksternt nyhetsbrev tar nå med eldre utgaver, regner ikke lenger nyhetsbrevets egne innlegg som manglende kilder, og viser dekningen først i tabellen.",
-   "detaljer": "Ticket#169: tre forbedringer av referansesjekken (12eccc5, f62a901, fff3ed6).",
    "change": 164,
    "git": "fff3ed6"
   },
@@ -112,7 +110,6 @@
    "versjon": "v5.33",
    "dato": "2026-10-25",
    "tekst": "Nattløypa bruker ikke lenger det brede nyhetssøket som ikke bidro til utgaven, og en sak blir ikke lenger regnet som bekreftet når søket viser at den er flere dager gammel.",
-   "detaljer": "Change#155 (#130): innhenting uten bredt LDR-dypdykk; sperre i LDR per sak mot oppgradering av saker med uverifisert dato ≥ 3 døgn.",
    "change": 155,
    "git": "c615a67"
   },
@@ -183,7 +180,6 @@
    "versjon": "v5.23",
    "dato": "2026-10-22",
    "tekst": "Nye sårbarheter med kritisk alvorlighetsgrad (CVSS 9 eller høyere) søkes nå opp målrettet hver natt, slik at viktige saker fanges opp selv før de faste kildene har skrevet om dem.",
-   "detaljer": "Change#136: målrettet søk etter nye kritiske sårbarheter hver natt. Bare artikler fra betrodde kilder som faktisk omtaler sårbarheten tas med; resten av løypa avgjør som før.",
    "change": 136,
    "git": "4aa5086"
   },
@@ -191,7 +187,6 @@
    "versjon": "v5.22",
    "dato": "2026-10-22",
    "tekst": "Søket i nyhetsarkivet finner igjen de nyeste artiklene, og en avbrutt natt kan nå tas opp igjen samme morgen.",
-   "detaljer": "Change#135: arkivsok.fts_bygg() kalles i v5/innhenting.py hver natt (FTS-indeksen sto på 9/10). run-v5.sh: energi-pulse arver ikke lenger v5-låsen (9>&-), som hindret gjenopptak 22/10.",
    "change": 135,
    "git": "96eb5db"
   },
@@ -303,7 +298,6 @@
    "versjon": "v5.6",
    "dato": "2026-10-17",
    "tekst": "Saker som allerede sto i en tidligere utgave, stoppes nå når de bygger på samme kilde eller nesten samme originaltittel. Toppfeltet på nettsiden blir stående når du blar.",
-   "detaljer": "Change#116 (gjentakelse mot publiserte kilder) og Change#115 (fast toppfelt).",
    "change": 116,
    "git": "4ddd310"
   },
